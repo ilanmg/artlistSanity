@@ -3,6 +3,7 @@ package resources;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -17,11 +18,12 @@ public class baseTest{
 	
 	public WebDriver driver=null;
 	
+	
 	@Test
 	public WebDriver Login() throws IOException, InterruptedException
 	{
 		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\Ilan Amgar\\Mavenjava\\src\\main\\java\\resources\\data.properties");
+		InputStream fis = getClass().getResourceAsStream("data.properties");
 		
 		prop.load(fis);
 		String browserName=prop.getProperty("browser");
