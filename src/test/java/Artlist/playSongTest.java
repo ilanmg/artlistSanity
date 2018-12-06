@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 	import org.testng.annotations.Test;
     import resources.baseTest;
     import org.bson.Document;
-	import org.junit.*;
+	//import org.junit.*;
 
 	public class playSongTest extends baseTest{
 

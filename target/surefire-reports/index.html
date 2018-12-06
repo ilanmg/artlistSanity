@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                    <span class="method-stats">8 methods, 3 failed,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,7 +102,17 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.paymentTest" hash-for-method="payment">payment</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.SignInTest" hash-for-method="basePageNavigation(ilanmg@artlist.io, [Tomido12])">basePageNavigation(ilanmg@artlist.io, [Tomido12])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.playSongTest" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.joinTest" hash-for-method="loginTest(ilanmg@artlist.io, Tomido12, null)">loginTest(ilanmg@artlist.io, Tomido12, null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
@@ -116,27 +126,27 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.SignInTest" hash-for-method="basePageNavigation(ilanmg176@artlist.io, [Tomido12])">basePageNavigation(ilanmg176@artlist.io, [Tomido12])</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.SignInTest" hash-for-method="basePageNavigation(ilanmg@artlist.io, [Tomido12])">basePageNavigation(ilanmg@artlist.io, [Tomido12])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.SignInTest" hash-for-method="basePageNavigation(ilanmg177@artlist.io, [Tomido12])">basePageNavigation(ilanmg177@artlist.io, [Tomido12])</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.SignInTest" hash-for-method="basePageNavigation(ilanmg@artlist.io, [Tomido12])">basePageNavigation(ilanmg@artlist.io, [Tomido12])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.SignInTest" hash-for-method="basePageNavigation(ilanmg178@artlist.io, [Tomido12])">basePageNavigation(ilanmg178@artlist.io, [Tomido12])</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.joinTest" hash-for-method="loginTest(ilanmg@artlist.io, Tomido12, [restricted user])">loginTest(ilanmg@artlist.io, Tomido12, [restricted user])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.playSongTest" hash-for-method="login">login</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.joinTest" hash-for-method="loginTest(ilanmg@artlist.io, Tomido12, [restricted user])">loginTest(ilanmg@artlist.io, Tomido12, [restricted user])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.joinTest" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="Artlist.paymentTest" hash-for-method="payment">payment</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -154,23 +164,25 @@
           <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Artlist.paymentTest</span>
+              <span class="class-name">Artlist.joinTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="payment">
-                  </a> <!-- payment -->
-                  <span class="method-name">payment</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not interactable
+                  <a name="loginTest(ilanmg@artlist.io, Tomido12, null)">
+                  </a> <!-- loginTest(ilanmg@artlist.io, Tomido12, null) -->
+                  <span class="method-name">loginTest</span>
+                  <span class="parameters">(ilanmg@artlist.io, Tomido12, null)</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=70.0.3538.110)
   (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
 System info: host: &apos;DESKTOP-KMFJ2QA&apos;, ip: &apos;10.0.0.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\ILANAM~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64506}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 624362d5cafd31981848290e734c9a91
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\ILANAM~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62919}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 70.0.3538.110, webStorageEnabled: true}
+Session ID: 46bf28102f251f5533fcc6c7fdc7276b
+*** Element info: {Using=id, value=user-login-btn}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
@@ -179,10 +191,70 @@ Session ID: 624362d5cafd31981848290e734c9a91
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at Artlist.paymentTest.payment(paymentTest.java:43)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at resources.baseTest.Login(baseTest.java:48)
+	at Artlist.joinTest.loginTest(joinTest.java:31)
 ... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Artlist.SignInTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="basePageNavigation(ilanmg@artlist.io, [Tomido12])">
+                  </a> <!-- basePageNavigation(ilanmg@artlist.io, [Tomido12]) -->
+                  <span class="method-name">basePageNavigation</span>
+                  <span class="parameters">(ilanmg@artlist.io, [Tomido12])</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: failed to change window state to normal, current state is maximized
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
+System info: host: &apos;DESKTOP-KMFJ2QA&apos;, ip: &apos;10.0.0.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\ILANAM~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63642}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 70.0.3538.110, webStorageEnabled: true}
+Session ID: 48da93125c91ed847e10c2ad39c356e4
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+	at Artlist.SignInTest.basePageNavigation(SignInTest.java:34)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Artlist.playSongTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at Artlist.playSongTest.login(playSongTest.java:34)
+... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -196,9 +268,33 @@ Session ID: 624362d5cafd31981848290e734c9a91
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
+                  <a name="loginTest(ilanmg@artlist.io, Tomido12, [restricted user])">
+                  </a> <!-- loginTest(ilanmg@artlist.io, Tomido12, [restricted user]) -->
                   <span class="method-name">loginTest</span>
+                  <span class="parameters">(ilanmg@artlist.io, Tomido12, [restricted user])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest(ilanmg@artlist.io, Tomido12, [restricted user])">
+                  </a> <!-- loginTest(ilanmg@artlist.io, Tomido12, [restricted user]) -->
+                  <span class="method-name">loginTest</span>
+                  <span class="parameters">(ilanmg@artlist.io, Tomido12, [restricted user])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Artlist.paymentTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="payment">
+                  </a> <!-- payment -->
+                  <span class="method-name">payment</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -211,41 +307,18 @@ Session ID: 624362d5cafd31981848290e734c9a91
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="basePageNavigation(ilanmg176@artlist.io, [Tomido12])">
-                  </a> <!-- basePageNavigation(ilanmg176@artlist.io, [Tomido12]) -->
+                  <a name="basePageNavigation(ilanmg@artlist.io, [Tomido12])">
+                  </a> <!-- basePageNavigation(ilanmg@artlist.io, [Tomido12]) -->
                   <span class="method-name">basePageNavigation</span>
-                  <span class="parameters">(ilanmg176@artlist.io, [Tomido12])</span>
+                  <span class="parameters">(ilanmg@artlist.io, [Tomido12])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="basePageNavigation(ilanmg177@artlist.io, [Tomido12])">
-                  </a> <!-- basePageNavigation(ilanmg177@artlist.io, [Tomido12]) -->
+                  <a name="basePageNavigation(ilanmg@artlist.io, [Tomido12])">
+                  </a> <!-- basePageNavigation(ilanmg@artlist.io, [Tomido12]) -->
                   <span class="method-name">basePageNavigation</span>
-                  <span class="parameters">(ilanmg177@artlist.io, [Tomido12])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="basePageNavigation(ilanmg178@artlist.io, [Tomido12])">
-                  </a> <!-- basePageNavigation(ilanmg178@artlist.io, [Tomido12]) -->
-                  <span class="method-name">basePageNavigation</span>
-                  <span class="parameters">(ilanmg178@artlist.io, [Tomido12])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
-          <div class="suite-Surefire_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Artlist.playSongTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="login">
-                  </a> <!-- login -->
-                  <span class="method-name">login</span>
+                  <span class="parameters">(ilanmg@artlist.io, [Tomido12])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -304,31 +377,39 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login')
-data.setCell(0, 2, 'Artlist.playSongTest')
-data.setCell(0, 3, 43815);
+data.setCell(0, 1, 'payment')
+data.setCell(0, 2, 'Artlist.paymentTest')
+data.setCell(0, 3, 27606);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'payment')
-data.setCell(1, 2, 'Artlist.paymentTest')
-data.setCell(1, 3, 24528);
+data.setCell(1, 1, 'basePageNavigation')
+data.setCell(1, 2, 'Artlist.SignInTest')
+data.setCell(1, 3, 22227);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginTest')
 data.setCell(2, 2, 'Artlist.joinTest')
-data.setCell(2, 3, 15411);
+data.setCell(2, 3, 21326);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'basePageNavigation')
 data.setCell(3, 2, 'Artlist.SignInTest')
-data.setCell(3, 3, 13255);
+data.setCell(3, 3, 17591);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'basePageNavigation')
 data.setCell(4, 2, 'Artlist.SignInTest')
-data.setCell(4, 3, 13115);
+data.setCell(4, 3, 17219);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'basePageNavigation')
-data.setCell(5, 2, 'Artlist.SignInTest')
-data.setCell(5, 3, 12720);
+data.setCell(5, 1, 'loginTest')
+data.setCell(5, 2, 'Artlist.joinTest')
+data.setCell(5, 3, 15507);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'login')
+data.setCell(6, 2, 'Artlist.playSongTest')
+data.setCell(6, 3, 14302);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'loginTest')
+data.setCell(7, 2, 'Artlist.joinTest')
+data.setCell(7, 3, 12284);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
@@ -361,39 +442,51 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Artlist.joinTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">loginTest</span>
+                <span class="method-name">loginTest(ilanmg@artlist.io, Tomido12, [restricted user])</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginTest(ilanmg@artlist.io, Tomido12, [restricted user])</span>
+                <span class="method-start">15507 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTest(ilanmg@artlist.io, Tomido12, null)</span>
+                <span class="method-start">27791 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Artlist.paymentTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">payment</span>
-                <span class="method-start">15413 ms</span>
+                <span class="method-start">49122 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Artlist.playSongTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">login</span>
-                <span class="method-start">39945 ms</span>
+                <span class="method-start">76729 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Artlist.SignInTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">basePageNavigation(ilanmg176@artlist.io, [Tomido12])</span>
-                <span class="method-start">83762 ms</span>
+                <span class="method-name">basePageNavigation(ilanmg@artlist.io, [Tomido12])</span>
+                <span class="method-start">91031 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">basePageNavigation(ilanmg177@artlist.io, [Tomido12])</span>
-                <span class="method-start">96877 ms</span>
+                <span class="method-name">basePageNavigation(ilanmg@artlist.io, [Tomido12])</span>
+                <span class="method-start">113258 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">basePageNavigation(ilanmg178@artlist.io, [Tomido12])</span>
-                <span class="method-start">109598 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">basePageNavigation(ilanmg@artlist.io, [Tomido12])</span>
+                <span class="method-start">130849 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
