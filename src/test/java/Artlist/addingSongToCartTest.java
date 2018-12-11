@@ -1,9 +1,12 @@
 package Artlist;
 
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.Parameters;
@@ -11,24 +14,23 @@ import resources.baseTest;
 
 
 
-public class SignInTest extends baseTest{
+public class addingSongToCartTest extends baseTest{
 
 
-	private static final CharSequence email = null;
-	private static final CharSequence password = null;
+	//private static final CharSequence email = null;
+	//private static final CharSequence password = null;
 
-
-	@Test(dataProvider="getData")
-   		public void basePageNavigation (String email, CharSequence[] password) throws IOException, InterruptedException
+	 @BeforeTest
+     public void Logo() throws IOException, InterruptedException 	{ 
+	       Login();
+      }	
+	 
+	@Test
+	//(dataProvider="getData")
+   		public void addingSongToCart() throws IOException, InterruptedException
 		
-		{
-	    //driver=Login();
-		//Object[][] data = getData();
-		//System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
-		//WebDriver driver = new FirefoxDriver();
-		//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-		//WebDriver driver = new ChromeDriver();
-		Login();
+   		{
+	    
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//driver.get("https://test.artlist.io/");
 		//driver.manage().window().maximize();
@@ -36,11 +38,10 @@ public class SignInTest extends baseTest{
 		//driver.findElement(By.id("logemail")).sendKeys(email);
 		//driver.findElement(By.id("logpassword")).sendKeys(password);
 		//Thread.sleep(2000);;
-		//driver.findElement(By.id("btnlogin")).click();
-		driver.close();
-		}
-
-    
+		driver.findElement(By.cssSelector("#song_9184 > div:nth-child(1) > div > div.flex1.item-right > div > div.flex.flex1.cart-info > a.add-cart > i")).click();
+		
+   		}
+    /*
 		@DataProvider
 		public Object[][] getData() 
 		{
@@ -63,7 +64,13 @@ public class SignInTest extends baseTest{
 			
 			
 		}
-		
+		*/
+	
+		 @AfterTest
+		  public void afterTest() {
+			  //driver.close();
+		  }
+			
 	} 
 
 

@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.Parameters;
@@ -41,10 +42,11 @@ public class joinTest extends baseTest{
 		driver.findElement(By.id("visitoremail")).sendKeys("email");
 		driver.findElement(By.id("visitor-password")).sendKeys("password");
 		driver.findElement(By.id("free-signup")).click();
+		driver.close();
 	}
 	
 		//Thread.sleep(2000);
-		//driver.close();
+		
 		@DataProvider
 		public Object[][] getData() 
 		{
@@ -53,8 +55,7 @@ public class joinTest extends baseTest{
 			data[0][0]="ilanmg@artlist.io";
 			data[0][1]="Tomido12";
 			data[0][2]="restricted user";
-			
-			
+						
 			data[1][0]="ilanmg@artlist.io";
 			data[1][1]="Tomido12";
 			data[1][2]="restricted user";
@@ -66,4 +67,9 @@ public class joinTest extends baseTest{
 			return data;
 			
 	}
+		 @AfterTest
+		  public void afterTest() {
+			  driver.close();
+		  }
+				
 }

@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Artlist.joinTest">
+      <class name="Artlist.addingSongToCartTest">
         <methods>
-          <include name="loginTest"/>
+          <include name="Logo"/>
+          <include name="afterTest"/>
+          <include name="addingSongToCart"/>
         </methods>
-      </class> <!-- Artlist.joinTest -->
+      </class> <!-- Artlist.addingSongToCartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
