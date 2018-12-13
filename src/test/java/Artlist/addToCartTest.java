@@ -2,24 +2,18 @@ package Artlist;
 
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.testng.annotations.Parameters;
 import resources.baseTest;
 
 
 
-public class addToCartGetLicenseTest extends baseTest{
+public class addToCartTest extends baseTest{
 
 	 @BeforeTest
-     public void addToCartGetLicense() throws IOException, InterruptedException { 
+     public void addToCart() throws IOException, InterruptedException { 
 	      Login();
 	      Thread.sleep(5000);
 		
@@ -34,10 +28,7 @@ public class addToCartGetLicenseTest extends baseTest{
 	    		Thread.sleep(2000);
 	    		driver.findElement(By.cssSelector("#btnCheckOut")).click();
 	    		Thread.sleep(2000);
-	    		driver.findElement(By.id("congratscompletepayment")).click();
-	    		Thread.sleep(2000);
-	    		driver.findElement(By.cssSelector("#startnow-next > button > span:nth-child(1)")).click();  
-	    		                               
+	    		driver.findElement(By.cssSelector("#congratulation-modal > button > span:nth-child(1)")).click();  	    		    		
    		    }
     
 	 @AfterTest

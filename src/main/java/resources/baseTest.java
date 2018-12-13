@@ -24,10 +24,10 @@ public class baseTest{
 		
 		Properties prop=new Properties();
 		FileInputStream fis=new FileInputStream("C:\\dev\\QA\\assets\\data.properties");
-		//FileInputStream fis=new FileInputStream("\\QA\\assets\\data.properties");
+		
 		prop.load(fis);
 		String browserName=prop.getProperty("browser");
-		//System.out.println("browserName");
+		
 		
 		
 		if(browserName.equals("chrome"))
@@ -54,16 +54,10 @@ public class baseTest{
 		  driver.findElement(By.id("logpassword")).sendKeys("Tomido12");
 		  driver.findElement(By.id("btnlogin")).click(); 
 		  
-		 //Thread.sleep(2000);
-		 // driver.close();
+		 
 		  return driver;
 		 
-		 
-		  //driver.manage().window().maximize();
-		 // driver.findElement(By.id("user-login-btn")).click();
-		  //driver.findElement(By.id("logemail")).sendKeys("email");
-		 // driver.findElement(By.id("logpassword")).sendKeys("password");
-		  //driver.findElement(By.xpath("//*[@id=\"btnlogin\"]")).click();		}
+				}
 		
 	}	
 	

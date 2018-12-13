@@ -32,10 +32,7 @@ public class clickBecomeAnArtlistTest extends baseTest {
 
 		        driver.findElement(By.id("become-an-artist-link")).click();
 		        Thread.sleep(3000);
-		        
-		       
-		       // Thread.sleep(2000);
-	        }
+	        }   
 		  
 		  @AfterTest
 		  public void afterclass() {

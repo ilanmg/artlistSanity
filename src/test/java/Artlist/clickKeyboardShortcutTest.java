@@ -35,8 +35,6 @@ public class clickKeyboardShortcutTest  extends baseTest{
 		        
 		        driver.findElement(By.cssSelector(" #keyboard-modal > button:nth-child(1)")).click();
 		       
-		       // Thread.sleep(2000);
-		     
             }	
 		  
 		  @AfterTest

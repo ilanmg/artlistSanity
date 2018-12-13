@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Artlist.addingSongToCartTest">
+      <class name="Artlist.SignInTest">
         <methods>
-          <include name="Logo"/>
-          <include name="afterTest"/>
-          <include name="addingSongToCart"/>
+          <include name="basePageNavigation" invocation-numbers="2"/>
+          <include name="SignIn"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- Artlist.addingSongToCartTest -->
+      </class> <!-- Artlist.SignInTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

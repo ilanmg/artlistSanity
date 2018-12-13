@@ -23,20 +23,8 @@ public class joinTest extends baseTest{
 	public void loginTest( String name, String email, CharSequence[] password ) throws InterruptedException, IOException	
 	{
 	
-		//System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
-		//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-		//WebDriver driver = new ChromeDriver();
-		//WebDriver driver = new FirefoxDriver();
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
 		Login();
-		
-		//driver.get("https://test.artlist.io/");
-	    //driver.manage().window().maximize();
-		//driver.findElement(By.id("user-login-btn")).click();
-		//driver.findElement(By.name("loginemail")).sendKeys("ilanmg036@artlist.io");
-		//driver.findElement(By.id("logpassword")).sendKeys("Tomido12");
-		//Thread.sleep(2000);
+				
 		driver.findElement(By.className("join-link")).click();
 		driver.findElement(By.id("visitor-fullname")).sendKeys("name");
 		driver.findElement(By.id("visitoremail")).sendKeys("email");
@@ -45,7 +33,6 @@ public class joinTest extends baseTest{
 		driver.close();
 	}
 	
-		//Thread.sleep(2000);
 		
 		@DataProvider
 		public Object[][] getData() 

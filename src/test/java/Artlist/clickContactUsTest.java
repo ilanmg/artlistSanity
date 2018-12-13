@@ -35,9 +35,7 @@ public class clickContactUsTest  extends baseTest{
 		        Thread.sleep(3000);
 		        
 		        driver.findElement(By.cssSelector("#contact-modal > button:nth-child(1)")).click();
-		       
-		       // Thread.sleep(2000);
-		      
+		    
             }	
 		  
 		  @AfterTest

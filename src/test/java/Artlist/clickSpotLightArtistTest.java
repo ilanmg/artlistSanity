@@ -28,21 +28,21 @@ public class clickSpotLightArtistTest  extends baseTest{
 		  @Test
           public void clickSpotLightArtist() throws IOException, InterruptedException
 	        {
-					  	
-					        driver.findElement(By.className("trigger")).click();
-					        Thread.sleep(2000);
+		  	
+		        driver.findElement(By.className("trigger")).click();
+		        Thread.sleep(2000);
 
-					        driver.findElement(By.id("spotlight-link")).click();
-					        Thread.sleep(2000);
-					        
-					        driver.findElement(By.xpath("//*[@id=\"inspierd\"]/div[2]/div[1]/div/ul/li[2]/a")).click();
-					      
-					        Thread.sleep(2000);
-					        
-					        driver.findElement(By.xpath("//*[@id=\"inspierd\"]/div[2]/div[1]/div/ul/li[2]/a")).click();
-		                   // driver.close(); 
-		                    //driver.quit();
-		                }
+		        driver.findElement(By.id("spotlight-link")).click();
+		        Thread.sleep(2000);
+		        
+		        driver.findElement(By.xpath("//*[@id=\"inspierd\"]/div[2]/div[1]/div/ul/li[2]/a")).click();
+		      
+		        Thread.sleep(2000);
+		        
+		        driver.findElement(By.xpath("//*[@id=\"inspierd\"]/div[2]/div[1]/div/ul/li[2]/a")).click();
+		                
+		    }
+		  
 		  @AfterTest
 		    public void afterclass() {
 			  driver.close();

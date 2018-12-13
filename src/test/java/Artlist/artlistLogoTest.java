@@ -20,7 +20,7 @@ import resources.baseTest;
 				      driver.findElement(By.className("trigger")).click();
 				        Thread.sleep(2000);
 				      driver.findElement(By.cssSelector("#mainlogo > img")).click();
-			         // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+			       
 			          
 		}
 	   

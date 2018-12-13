@@ -38,6 +38,7 @@ public class clickVimeoTest  extends baseTest{
 		        Thread.sleep(2000);
 		      
             }
+		  
 		  @AfterTest
   		  public void aftertest() {
 	  		driver.close();

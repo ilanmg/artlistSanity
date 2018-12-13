@@ -26,9 +26,7 @@ public class clickMainMenueMoodTest  extends baseTest{
 	
 	        driver.findElement(By.className("side-menu-category-link")).click();
 	        Thread.sleep(2000);
-	        
-	       // Thread.sleep(2000);
-	     
+	      
 	    }	
 	  
 	  @AfterTest

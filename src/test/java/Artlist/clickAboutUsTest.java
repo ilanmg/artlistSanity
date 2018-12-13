@@ -29,7 +29,7 @@ public class clickAboutUsTest extends baseTest {
 		        
 		        driver.findElement(By.cssSelector(" #about-modal > button > span:nth-child(1)")).click();
 		       
-		       // Thread.sleep(2000);
+		   
 		   }		
 		  
 		  @AfterTest
