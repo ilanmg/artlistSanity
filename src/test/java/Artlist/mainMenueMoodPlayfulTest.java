@@ -1,6 +1,5 @@
 package Artlist;
 
-
 import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterTest;
@@ -10,10 +9,10 @@ import resources.baseTest;
 
 
 
-public class mainMenueMoodCarefreeTest extends baseTest{
+public class mainMenueMoodPlayfulTest extends baseTest {
 
 	 @BeforeTest
-     public void mainMenueMoodCarefree() throws IOException, InterruptedException { 
+     public void mainMenueMoodPlayful() throws IOException, InterruptedException { 
 	      Login();
 	      Thread.sleep(3000);
 		
@@ -24,7 +23,7 @@ public class mainMenueMoodCarefreeTest extends baseTest{
 		  	{
 				driver.findElement(By.linkText("Mood")).click();
 				 Thread.sleep(2000);
-	    		driver.findElement(By.linkText("Carefree")).click();
+	    		driver.findElement(By.linkText("Playful")).click();
 	    		 Thread.sleep(2000);
 	    		driver.findElement(By.className("remove-tag-link")).click();
 	    	  		    		

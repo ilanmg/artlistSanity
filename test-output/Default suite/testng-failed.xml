@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Artlist.SignInTest">
+      <class name="Artlist.sortByStaffPicks">
         <methods>
-          <include name="basePageNavigation" invocation-numbers="2"/>
-          <include name="SignIn"/>
-          <include name="close"/>
+          <include name="SortOrder"/>
+          <include name="selectStudyType"/>
+          <include name="aftertest"/>
         </methods>
-      </class> <!-- Artlist.SignInTest -->
+      </class> <!-- Artlist.sortByStaffPicks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

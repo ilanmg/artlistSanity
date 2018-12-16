@@ -10,7 +10,7 @@ import resources.baseTest;
 
 
 
-public class mainMenueMoodCarefreeTest extends baseTest{
+public class mainMenueMoodLoveTest extends baseTest{
 
 	 @BeforeTest
      public void mainMenueMoodCarefree() throws IOException, InterruptedException { 
@@ -24,7 +24,7 @@ public class mainMenueMoodCarefreeTest extends baseTest{
 		  	{
 				driver.findElement(By.linkText("Mood")).click();
 				 Thread.sleep(2000);
-	    		driver.findElement(By.linkText("Carefree")).click();
+	    		driver.findElement(By.linkText("Love")).click();
 	    		 Thread.sleep(2000);
 	    		driver.findElement(By.className("remove-tag-link")).click();
 	    	  		    		

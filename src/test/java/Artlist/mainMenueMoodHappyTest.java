@@ -14,12 +14,12 @@ public class mainMenueMoodHappyTest extends baseTest{
 	 @BeforeTest
      public void mainMenueMoodHappy() throws IOException, InterruptedException { 
 	      Login();
-	      Thread.sleep(5000);
+	      Thread.sleep(3000);
 		
       }	
 	 
 	@Test
-		public void addingSongToCart() throws IOException, InterruptedException
+		public void Mood() throws IOException, InterruptedException
 		  	{
 				driver.findElement(By.linkText("Mood")).click();
 				 Thread.sleep(2000);
