@@ -27,14 +27,14 @@ public class MainMenueMoodDramaticTest extends baseTest{
 	    		driver.findElement(By.linkText("Dramatic")).click();
 	    		 Thread.sleep(2000);
 	    		driver.findElement(By.className("remove-tag-link")).click();
-	    		
+	    	
 	    	}
-    
+  
 	 @AfterTest
-		  public void afterTest() {
-			  driver.close();
-		  }
-			
+	  public void afterTest() {
+		  driver.close();
+	  }
+	
 	} 
 
 

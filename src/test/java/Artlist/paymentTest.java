@@ -18,7 +18,7 @@ public class paymentTest extends baseTest{
 		driver.findElement(By.xpath("//*[@id=\"top-bar\"]/div[1]/div/div/div/div[2]/div/a[1]")).click();
 		driver.findElement(By.id("visitor-fullname")).sendKeys("ilan amgar");
 		Thread.sleep(2000);
-		driver.findElement(By.id("visitoremail")).sendKeys("test77@artlist1.io");
+		driver.findElement(By.id("visitoremail")).sendKeys("test81@artlist1.io");
 		Thread.sleep(2000);
 		driver.findElement(By.id("visitor-password")).sendKeys("Tomido12");
 		driver.findElement(By.id("free-signup")).click();

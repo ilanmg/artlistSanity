@@ -61,7 +61,7 @@ public class SignInTest extends baseTest{
 		}
 		
 		@AfterTest
-		public void close() {
+		public void afterTest() {
 			driver.close();
 		}
 		

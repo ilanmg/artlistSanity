@@ -36,7 +36,7 @@ public class clickYouTubeTest  extends baseTest{
 				      
 	         }
 	        @AfterTest
-  		  public void aftertest() {
+  		  public void afterTest() {
 	  		driver.close();
          }	
 	}   

@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -46,7 +47,7 @@ public class baseTest{
 		{
 			 driver = new InternetExplorerDriver();
 		}
-		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+		  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
 		  driver.get("https://test.artlist.io/");
 		  driver.manage().window().maximize();
 		  driver.findElement(By.id("user-login-btn")).click();
@@ -54,10 +55,9 @@ public class baseTest{
 		  driver.findElement(By.id("logpassword")).sendKeys("Tomido12");
 		  driver.findElement(By.id("btnlogin")).click(); 
 		  
-		 
+		  
 		  return driver;
-		 
-				}
 		
-	}	
+				}
+}	
 	

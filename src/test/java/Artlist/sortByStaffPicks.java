@@ -48,8 +48,8 @@ public class sortByStaffPicks  extends baseTest {
 			     //  driver.findElement(By.xpath(" (.//*[normalize-space(text()) and normalize-space(.)='Staff pick'])[1]/following::li[1]")).click();	
 			       
 		 @AfterTest
-	  		  public void aftertest() {
-		  		//driver.close();
+	  		  public void afterTest() {
+		  		driver.close();
       }	
 }   
 

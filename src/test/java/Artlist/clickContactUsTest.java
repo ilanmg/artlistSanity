@@ -39,7 +39,7 @@ public class clickContactUsTest  extends baseTest{
             }	
 		  
 		  @AfterTest
-		  public void afterclass() {
+		  public void afterTest() {
 			  driver.close();
 		  }	
 	}   

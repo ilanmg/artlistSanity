@@ -40,7 +40,7 @@ public class MainMenueMoodScaryAndDarkTest extends baseTest {
     
 	 @AfterTest
 		  public void afterTest() {
-			  //driver.close();
+			  driver.close();
 		  }
 			
 	} 

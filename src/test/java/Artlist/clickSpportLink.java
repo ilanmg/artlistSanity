@@ -42,7 +42,7 @@ public class clickSpportLink  extends baseTest{
 				   
 		      }
 		  @AfterTest
-	  		public void aftertest() {
+	  		public void afterTest() {
 		  		driver.close();
         }	
 	}   

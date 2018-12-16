@@ -36,7 +36,7 @@ public class clickInstagramTest extends baseTest{
 		    }
 		  
 		  @AfterTest
-		  public void afterclass() {
+		  public void afterTest() {
 			  driver.close();
 		  }	
 		}   

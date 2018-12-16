@@ -35,7 +35,7 @@ public class clickBecomeAnArtlistTest extends baseTest {
 	        }   
 		  
 		  @AfterTest
-		  public void afterclass() {
+		  public void afterTest() {
 			  driver.close();
 		  }	
 	}   

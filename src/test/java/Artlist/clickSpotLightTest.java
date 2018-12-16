@@ -29,7 +29,7 @@ public class clickSpotLightTest extends baseTest{
 					        Thread.sleep(2000);
 	        }
 		  @AfterTest
-		  		public void aftertest() {
+		  		public void afterTest() {
 			  		driver.close();
               }	
         }   
