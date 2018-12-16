@@ -39,7 +39,7 @@ Licensed to the Apache Software Foundation (ASF)
    | Default: ~/.m2/repository
   <localRepository>/path/to/local/repo</localRepository>
   -->
-<localRepository>~/.m2/repository</localRepository>
+<localRepository>/opt/bitnami/jenkins/jenkins_home/.m2/repository</localRepository>
   <!-- interactiveMode
    | This will determine whether maven prompts you when it needs input. If set to false,
    | maven will use a sensible default value, perhaps based on some other setting, for
