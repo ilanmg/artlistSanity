@@ -24,7 +24,8 @@ public class baseTest{
 	{
 		
 		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\dev\\QA\\assets\\data.properties");
+		String file  = "data.properties";
+        	InputStream fis = baseTest.class.getResourceAsStream(file);
 		
 		prop.load(fis);
 		String browserName=prop.getProperty("browser");
@@ -58,6 +59,8 @@ public class baseTest{
 		  
 		  return driver;
 		
-				}
-}	
+		
+		}
+
+}	
 	
