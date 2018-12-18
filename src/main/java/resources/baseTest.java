@@ -25,14 +25,14 @@ public class baseTest{
     public WebDriver Login() throws IOException, InterruptedException
     {
         
-        Properties prop=new Properties();
+        Properties prop = new Properties();
         //FileInputStream fis = new FileInputStream("/data.properties");
         //FileInputStream fis=new FileInputStream("/data.properties");
-        String file  = "data.properties";
-        InputStream fis = baseTest.class.getResourceAsStream(file);        
+//        String file  = "data.properties";
+//        InputStream fis = baseTest.class.getResourceAsStream(file);
         
-        prop.load(fis);
-        String browserName=prop.getProperty("browser");
+//        prop.load(fis);
+        String browserName = "chrome";
         
         
         
