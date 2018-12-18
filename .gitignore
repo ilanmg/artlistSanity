@@ -1,9 +1,0 @@
-/target
-/target/**
-/test-output/**
-/dist/
-/exploded-archives/
-/test-build/
-/test-output/
-/test-report/
-/target/
