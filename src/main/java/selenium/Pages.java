@@ -13,11 +13,13 @@ public abstract class Pages extends SeleniumFunctions {
 	private String baseUrl = new TypedProperties("/test_config.properties").getValue("base_url");
 
 	protected void open(String path){
-		driver.get(baseUrl + path);
+		driver.get(baseUrl + path); 
 	}
 
 	protected void open(){
 		driver.get(baseUrl);
 	}
+
+	protected  WebDriver getDriver(){return driver;}
 
 }

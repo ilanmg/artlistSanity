@@ -48,11 +48,11 @@ public class WebDriverBuilder {
         String browser = webDriverConfig.getBrowserName();
 
         switch (browser) {
-            case "chrome":
-                ChromeDriverManager.getInstance().setup();
-                final ChromeDriver chromeDriver = new ChromeDriver(capabilities);
-                chromeDriver.manage().window().maximize();
-                return chromeDriver;
+            case "firefox":
+            	 MarionetteDriverManager.getInstance().setup();
+                 FirefoxDriver firefoxDriver = new FirefoxDriver(capabilities);
+                 firefoxDriver.manage().window().maximize();
+                 return firefoxDriver;
             case "edge":
                 EdgeDriverManager.getInstance().setup();
                 final EdgeDriver edgeDriver = new EdgeDriver(capabilities);
@@ -76,10 +76,10 @@ public class WebDriverBuilder {
                 phantomJsWebDriver.manage().window().maximize();
                 return phantomJsWebDriver;
             default:
-                MarionetteDriverManager.getInstance().setup();
-                FirefoxDriver firefoxDriver = new FirefoxDriver(capabilities);
-                firefoxDriver.manage().window().maximize();
-                return firefoxDriver;
+                ChromeDriverManager.getInstance().setup();
+                final ChromeDriver chromeDriver = new ChromeDriver(capabilities);
+                chromeDriver.manage().window().maximize();
+                return chromeDriver;
         }
     }
 }

@@ -2,9 +2,9 @@ package selenium.utils.annotations.browser;
 
 public enum Browsers {
 
+	CHROME("chrome"),
     FIREFOX("firefox"),
     PHANTOMJS("phantomjs"),
-    CHROME("chrome"),
     OPERA("opera"),
     EDGE("MicrosoftEdge"),
     INTERNET_EXPLORER("internet-explorer");

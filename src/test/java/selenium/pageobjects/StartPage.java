@@ -11,7 +11,9 @@ public class StartPage extends Pages {
 	}
 
 	public void open(){
-		super.open();
+		super.open(); 
 	}
+
+	public   WebDriver getDriver(){return driver;}
 
 }
