@@ -2,6 +2,7 @@ package selenium.driver;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,6 +18,10 @@ import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
 import io.github.bonigarcia.wdm.MarionetteDriverManager;
 import io.github.bonigarcia.wdm.OperaDriverManager;
 import io.github.bonigarcia.wdm.PhantomJsDriverManager;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class WebDriverBuilder {
 
@@ -76,10 +81,17 @@ public class WebDriverBuilder {
                 phantomJsWebDriver.manage().window().maximize();
                 return phantomJsWebDriver;
             default:
-                ChromeDriverManager.getInstance().setup();
-                final ChromeDriver chromeDriver = new ChromeDriver(capabilities);
-                chromeDriver.manage().window().maximize();
-                return chromeDriver;
+                String nodeURL = "http://127.0.0.1:4444/wd/hub";
+                DesiredCapabilities capability = DesiredCapabilities.chrome();
+                capability.setBrowserName("chrome");
+                capability.setPlatform(Platform.LINUX);
+                try {
+                    return new RemoteWebDriver(new URL(nodeURL), capability);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
+
         }
+        return null;
     }
 }
