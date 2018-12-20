@@ -1,3 +1,5 @@
+package selenium.testcases;
+
 import static selenium.utils.annotations.browser.Browsers.EDGE;
 import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
 import static selenium.utils.annotations.browser.Browsers.PHANTOMJS;
