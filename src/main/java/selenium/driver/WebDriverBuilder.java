@@ -81,7 +81,7 @@ public class WebDriverBuilder {
                 phantomJsWebDriver.manage().window().maximize();
                 return phantomJsWebDriver;
             default:
-                String nodeURL = "http://127.0.0.1:4444/wd/hub";
+                String nodeURL = "https://jenkins-grid-hub.azurewebsites.net//wd/hub";
                 DesiredCapabilities capability = DesiredCapabilities.chrome();
                 capability.setBrowserName("chrome");
                 capability.setPlatform(Platform.LINUX);
