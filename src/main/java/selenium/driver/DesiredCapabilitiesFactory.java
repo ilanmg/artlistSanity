@@ -36,7 +36,7 @@ class DesiredCapabilitiesFactory {
 		// Set specific settings for chrome.
 		else if (browser.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
+//			options.addArguments("--headless");
 			options.addArguments("start-maximized");
 			options.addArguments("user-agent=" + userAgent);
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);

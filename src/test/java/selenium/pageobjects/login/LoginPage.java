@@ -5,9 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import selenium.Pages;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class LoginPage extends Pages {
 
     public LoginPage(WebDriver driver) {
@@ -27,6 +24,10 @@ public class LoginPage extends Pages {
     private WebElement loginBtn;
 
 
+    @FindBy(css= ".join-link")
+    private WebElement joinlink;
+
+
 
 
     public void setEmail(String email){
@@ -42,7 +43,14 @@ public class LoginPage extends Pages {
     public void clickLoginBtn() {
         waitForElement(loginBtn, 10);
         waitForElement(loaginPasswordInput, 10);
-        waitForElement(logemail, 10);
+       //waitForElement(logemail, 10);
         loginBtn.click();
+    }
+
+    public void clickJoinLink() {
+        waitForElement(joinlink, 10);
+        waitForElement(loaginPasswordInput, 10);
+        waitForElement(logemail, 10);
+        joinlink.click();
     }
 }

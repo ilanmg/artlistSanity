@@ -2,30 +2,33 @@ package selenium.driver;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.EdgeDriverManager;
 import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
-import io.github.bonigarcia.wdm.MarionetteDriverManager;
 import io.github.bonigarcia.wdm.OperaDriverManager;
 import io.github.bonigarcia.wdm.PhantomJsDriverManager;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class WebDriverBuilder {
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class WebDriverRemoteBuilder {
 
     private String name;
     private final WebDriverConfig webDriverConfig;
     private String userAgent;
     private boolean disableCookies;
 
-    public WebDriverBuilder(WebDriverConfig webDriverConfig) {
+    private String seleniumHubUrl;
+
+
+    public WebDriverRemoteBuilder(WebDriverConfig webDriverConfig) {
         this.webDriverConfig = webDriverConfig;
     }
 
@@ -46,13 +49,21 @@ public class WebDriverBuilder {
         DesiredCapabilitiesFactory desiredCapabilitiesFactory = new DesiredCapabilitiesFactory();
         DesiredCapabilities capabilities = desiredCapabilitiesFactory.initDesiredCapabilities(webDriverConfig, userAgent, disableCookies);
         String browser = webDriverConfig.getBrowserName();
+        seleniumHubUrl = webDriverConfig.getSeleniumHbUrl();
+
+        DesiredCapabilities capability;
 
         switch (browser) {
-            case "chrome":
-                ChromeDriverManager.getInstance().setup();
-                final ChromeDriver chromeDriver = new ChromeDriver(capabilities);
-                chromeDriver.manage().window().maximize();
-                return chromeDriver;
+            case "firefox":
+                capability = DesiredCapabilities.firefox();
+                capability.setBrowserName("firefox");
+                capability.setPlatform(Platform.LINUX);
+                try {
+                    return new RemoteWebDriver(new URL(seleniumHubUrl), capability);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                    return null;
+                }
             case "edge":
                 EdgeDriverManager.getInstance().setup();
                 final EdgeDriver edgeDriver = new EdgeDriver(capabilities);
@@ -76,10 +87,15 @@ public class WebDriverBuilder {
                 phantomJsWebDriver.manage().window().maximize();
                 return phantomJsWebDriver;
             default:
-                MarionetteDriverManager.getInstance().setup();
-                FirefoxDriver firefoxDriver = new FirefoxDriver(capabilities);
-                firefoxDriver.manage().window().maximize();
-                return firefoxDriver;
+                capability = DesiredCapabilities.chrome();
+                capability.setBrowserName("chrome");
+                capability.setPlatform(Platform.LINUX);
+                try {
+                    return new RemoteWebDriver(new URL(seleniumHubUrl), capability);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                    return null;
+                }
         }
     }
 }

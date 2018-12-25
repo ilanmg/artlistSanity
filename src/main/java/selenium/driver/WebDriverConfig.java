@@ -16,4 +16,8 @@ public class WebDriverConfig {
 	int getDomMaxScriptRunTime() {
         return typedProperties.getInt("dom.max_script_run_time");
 	}
+
+	String getSeleniumHbUrl() {
+		return typedProperties.getValue("selenium.hub.url");
+	}
 }
