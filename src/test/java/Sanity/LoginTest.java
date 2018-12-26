@@ -1,20 +1,18 @@
-package selenium.testcases;
+package Sanity;
 
 import static selenium.utils.annotations.browser.Browsers.EDGE;
 import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
 import static selenium.utils.annotations.browser.Browsers.PHANTOMJS;
 import static selenium.utils.browser.Screen.XLARGE;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import selenium.SeleniumTestWrapper;
-import selenium.pageobjects.HeaderSearch;
 import selenium.pageobjects.StartPage;
 import selenium.pageobjects.login.LoginPage;
 import selenium.utils.annotations.browser.Browser;
@@ -29,13 +27,16 @@ public class LoginTest extends SeleniumTestWrapper {
     LoginPage loginPage = PageFactory.initElements(getDriver(), LoginPage.class);
     WebDriver driver = startPage.getDriver();
     WebDriverWait wait = new WebDriverWait(driver, 5);
-    @Before
+    
+    
+    @BeforeTest
     public void setup() {
         startPage.open();
     }
 
     @Test
     public void login() throws InterruptedException {
+    	Thread.sleep(3000);
         wait.until(ExpectedConditions.elementToBeClickable(By.id("user-login-btn")));
         driver.findElement(By.id("user-login-btn")).click();
 

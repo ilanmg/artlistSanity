@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Sanity" parallel="tests" thread-count="2">
-    <test thread-count="2" name="Sanity">
-        <packages>
-            <!--<package name="Sanity"></package>-->
-            <package name="selenium.testcases"></package>
-        </packages>
-        <classes>
-            <class name="selenium.testcases.clickTriggerIconTest"></class>
-            <!--<class name="Sanity.JoinTest"/>-->
-            <!--<class name="Sanity.LoginTest"/>-->
-            <!--<class name="Sanity.searchTest"/>-->
-            <!--<class name="Sanity.StartNowModalTest"/>-->
-        </classes>
-    </test>
+<suite name="Sanity">
+    <test name="Sanity">
+	       <packages>
+     			 <package name="Sanity"/>
+  		   </packages>
+  	</test>
+    <test name="Artlist">
+     		<packages>
+     			 <package name="Artlist"/>
+  		   </packages>
+     </test>
 </suite>
+
+

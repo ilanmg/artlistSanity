@@ -1,13 +1,11 @@
 package selenium;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import static org.junit.Assume.assumeFalse;
 import static org.junit.Assume.assumeTrue;
-
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Rule;
 import org.openqa.selenium.WebDriver;
-
 import selenium.configurations.TestConfig;
 import selenium.driver.WebDriverConfig;
 import selenium.utils.WebDriverProvider;
@@ -36,7 +34,7 @@ public abstract class SeleniumTestWrapper {
 	/**
 	 * test class annotations
 	 */
-	@Before
+	@BeforeMethod
 	public void setUserAgent(){
 		
 		UserAgent userAgent = this.getClass().getAnnotation(UserAgent.class);
@@ -45,7 +43,7 @@ public abstract class SeleniumTestWrapper {
 		}
 	}
 
-	@Before
+	@BeforeMethod
 	public void disableCookies(){
 		DisableCookies cookies = this.getClass().getAnnotation(DisableCookies.class);
 		if (cookies != null) {
@@ -53,7 +51,7 @@ public abstract class SeleniumTestWrapper {
 		}
 	}
 
-	@Before
+	@BeforeMethod
 	public void browser() throws Exception {
 		Browser browser = this.getClass().getAnnotation(Browser.class);
 		if (browser != null){
@@ -75,7 +73,7 @@ public abstract class SeleniumTestWrapper {
 		return concatinatedBrowsers.substring(0,concatinatedBrowsers.lastIndexOf("&"));
 	}
 
-	@Before
+	@BeforeMethod
 	public void browserDimension(){
 		BrowserDimension browserDimension = this.getClass().getAnnotation(BrowserDimension.class);
 		if (browserDimension != null) {
@@ -83,10 +81,17 @@ public abstract class SeleniumTestWrapper {
 		}
 	}
 
-	@After
+	
+	@AfterMethod
 	public void closeBrowser(){
 		getDriver().quit();
 	}
+	
+	@AfterMethod 
+	public void cleanup(){
+		getDriver().quit();
+	}
+	
 
 
 }

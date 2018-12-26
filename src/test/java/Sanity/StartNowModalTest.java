@@ -1,6 +1,6 @@
-package selenium.testcases;
+package Sanity;
 
-import org.junit.Assert;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;

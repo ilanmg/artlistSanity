@@ -27,11 +27,6 @@ public class SiteHeader extends Pages {
 
 
 
-
-
-
-
-
     public WebElement clickOnSignIn() {
         waitForElement(signIn, 10);
         signIn.click();

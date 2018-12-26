@@ -10,8 +10,15 @@
         <browser.name>chrome</browser.name>
         <failsafe.rerunFailingTestsCount>2</failsafe.rerunFailingTestsCount>
     </properties>
-    <dependencies>
-        <dependency>
+		<dependencies>
+		    <dependency>
+			    <groupId>org.testng</groupId>
+			    <artifactId>testng</artifactId>
+			    <version>6.14.3</version>
+			    <scope>test</scope>
+            </dependency>
+           
+            <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.0.0</version>
@@ -55,17 +62,45 @@
             </testResource>
         </testResources>
         <plugins>
-            <plugin>
+        	<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.14.1</version>
                 <configuration>
-                    <systemPropertyVariables>
-                        <remote>false</remote>
-                    </systemPropertyVariables>
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
+                    <!-- Suite testng xml file to consider for test execution -->
+                    <suiteXmlFiles>
+
+                        <suiteXmlFile>src/test/resources/suites/suites-test-testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    
+                    <!--<properties>
+				       <property>   
+				            <name>parallel</name>     
+				            <value>methods</value>  
+				        </property>
+				        <property>   
+				            <name>threadcount</name>
+				            <value>5</value>        
+				        </property>
+				        <property>
+				            <name>dataproviderthreadcount</name>   
+				            <value>3</value>
+				        </property>
+                   </properties>-->
                 </configuration>
+                 
             </plugin>
+            <!--<plugin>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<systemPropertyVariables>-->
+                        <!--<remote>false</remote>-->
+                    <!--</systemPropertyVariables>-->
+                    <!--<includes>-->
+                        <!--<include>**/*Test.java</include>-->
+                    <!--</includes>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.19.1</version>

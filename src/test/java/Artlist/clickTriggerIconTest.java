@@ -1,4 +1,4 @@
-package selenium.testcases;
+package Artlist;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -23,7 +23,7 @@ import static selenium.utils.browser.Screen.XLARGE;
 
 @BrowserDimension(XLARGE)
 @Browser(skip = { INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX })
-public class clickTriggerIcon extends SeleniumTestWrapper {
+public class clickTriggerIconTest extends SeleniumTestWrapper {
 
     StartPage startPage = PageFactory.initElements(getDriver(), StartPage.class);
     LoginPage loginPage = PageFactory.initElements(getDriver(), LoginPage.class);
@@ -48,8 +48,8 @@ public class clickTriggerIcon extends SeleniumTestWrapper {
         SearchHeader.closeTriggerIcon();
 
 
-       // Assert.assertTrue(modals.modalIsVisibile(modals.pricingModal, true));
-       // modals.closeModal(modals.pricingModal);
+   
+     
 
 
 
