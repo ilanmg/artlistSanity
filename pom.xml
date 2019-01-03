@@ -73,26 +73,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.14.1</version>
                 <configuration>
-                    <!-- Suite testng xml file to consider for test execution -->
-                    <suiteXmlFiles>
 
+                    <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/suites/suites-test-testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-
-                    <!--<properties>
-				       <property>
-				            <name>parallel</name>
-				            <value>methods</value>
-				        </property>
-				        <property>
-				            <name>threadcount</name>
-				            <value>5</value>
-				        </property>
-				        <property>
-				            <name>dataproviderthreadcount</name>
-				            <value>3</value>
-				        </property>
-                   </properties>-->
                 </configuration>
 
             </plugin>
