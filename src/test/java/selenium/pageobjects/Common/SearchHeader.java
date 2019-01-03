@@ -11,19 +11,19 @@ public class SearchHeader extends Pages {
         super(driver);
     }
 
-    @FindBy(id="txtSearch")
+    @FindBy(css="#txtSearch")
     private WebElement searchInput;
 
-    @FindBy(linkText="Angry (Category)")
+    @FindBy(css="a.category-item-in-search-bar")
     private WebElement resultInput;
 
-    @FindBy(linkText="Ian Post (Artist)")
+    @FindBy(css="a.artist-page-opener")
     private WebElement resultLeadsToArtlistPage;
 
     @FindBy(className="tag-link")
     private WebElement closeResultInput;
 
-    @FindBy(className="remove-tag-link")
+    @FindBy(css="#tagslist > li > a.remove-tag-link")
     private WebElement removeResultInput;
 
     @FindBy(className="trigger")
@@ -32,7 +32,7 @@ public class SearchHeader extends Pages {
     @FindBy(css="div.trigger")
     private WebElement closingTriggerInput;
 
-    @FindBy(className="fal fa-search search-icon out-side")
+    @FindBy(css=".tob-bar-container i.search-icon")
     private WebElement searcByMagnifier;
 
 

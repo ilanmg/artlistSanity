@@ -11,22 +11,32 @@ public class LoginPage extends Pages {
         super(driver);
     }
 
-    @FindBy(id = "loginForm")
+    @FindBy(css = "form .join-link")
     private WebElement loginForm;
 
-    @FindBy(id= "logemail")
+    @FindBy(css= "#logemail")
     private WebElement logemail;
 
-    @FindBy(id= "logpassword")
+    @FindBy(css= "#logpassword")
     private WebElement loaginPasswordInput;
 
-    @FindBy(id= "btnlogin")
+    @FindBy(css= "#btnlogin")
     private WebElement loginBtn;
-
 
     @FindBy(css= ".join-link")
     private WebElement joinlink;
 
+    @FindBy(css = "form button.loginBtn--Google")
+    private WebElement GoogleElementFromStartNowBtn;
+    
+    @FindBy(css ="form button.loginBtn--Google")
+    private WebElement googleBtnLogin;
+    
+    @FindBy(css ="form button.loginBtn--Facebook")
+    private WebElement facebookBtnLogin;
+    
+    @FindBy(css = "button.btn.btn-default.loginBtn.loginBtn--Facebook")
+    private WebElement FacebookElementFromStartNowBtn;
 
 
 
@@ -53,4 +63,34 @@ public class LoginPage extends Pages {
         waitForElement(logemail, 10);
         joinlink.click();
     }
-}
+
+
+    public WebElement clickGoogleBtn() {
+        waitForElement(googleBtnLogin, 10);
+        googleBtnLogin.click();
+        return googleBtnLogin;
+
+    }
+    
+    public WebElement clickFacebookBtn() {
+        waitForElement(facebookBtnLogin, 10);
+        facebookBtnLogin.click();
+        return facebookBtnLogin;
+
+    }
+    
+    public WebElement clickFacebookBtnAfterClickingStartNowBtn() {
+        waitForElement(FacebookElementFromStartNowBtn, 10);
+        FacebookElementFromStartNowBtn.click();
+        return FacebookElementFromStartNowBtn;
+
+    }
+    
+    public WebElement clickGoogletnAfterClickingStartNowBtn() {
+        waitForElement(GoogleElementFromStartNowBtn, 10);
+        GoogleElementFromStartNowBtn.click();
+        return GoogleElementFromStartNowBtn;
+
+    }
+    
+ }

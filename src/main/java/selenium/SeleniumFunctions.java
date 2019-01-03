@@ -195,6 +195,9 @@ public abstract class SeleniumFunctions {
 		}
 	}
 
+	public void switchWindowHandeler(final String winHandle) {
+		this.driver.switchTo().window(winHandle);
+	}
 	protected boolean isReadonly(final By by) {
 		return Boolean.parseBoolean(this.driver.findElement(by).getAttribute("readonly"));
 	}
