@@ -56,10 +56,4 @@ public class StartNowModal extends Pages {
         return freeSignUpBtn;
     }
 
-//    public void closeModal();
-//    public void emailIsValid();
-//    public void passWordIsValid();
-//    public void joinUsModalIsDisplayed();
-
-
 }

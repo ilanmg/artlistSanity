@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Ilan Amgar\AppData\Local\Temp\testng-eclipse-828702536\testng-customsuite.xml</span>
+                    <span>C:\Users\Ilan Amgar\AppData\Local\Temp\testng-eclipse-70038683\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Sanity.PaymentTest" hash-for-method="Payment">Payment</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Sanity.FacebookAuthFromStartNowBtnTest" hash-for-method="FacebookLogin">FacebookLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,25 +120,25 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Sanity.PaymentTest</span>
+              <span class="class-name">Sanity.FacebookAuthFromStartNowBtnTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Payment">
-                  </a> <!-- Payment -->
-                  <span class="method-name">Payment</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (3439728cbbfe1fec1925350da68f6a1f)] -&gt; class name: pricing-subscribe-now-paypal] (tried for 10 second(s) with 500 MILLISECONDS interval)
+                  <a name="FacebookLogin">
+                  </a> <!-- FacebookLogin -->
+                  <span class="method-name">FacebookLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (49dd9f4486ec0673c02647dfbc08a07a)] -&gt; css selector: button.btn.btn-default.loginBtn.loginBtn--Facebook] (tried for 10 second(s) with 500 MILLISECONDS interval)
 Build info: version: &apos;3.0.0&apos;, revision: &apos;350cf60&apos;, time: &apos;2016-10-13 10:48:57 -0700&apos;
 System info: host: &apos;DESKTOP-KMFJ2QA&apos;, ip: &apos;10.0.0.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:65297}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb), userDataDir=C:\Users\ILANAM~1\AppData\Local\Temp\scoped_dir30172_5711}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.110, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3439728cbbfe1fec1925350da68f6a1f
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:60965}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb), userDataDir=C:\Users\ILANAM~1\AppData\Local\Temp\scoped_dir10932_30202}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 49dd9f4486ec0673c02647dfbc08a07a
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
 	at selenium.SeleniumFunctions.waitForElement(SeleniumFunctions.java:86)
-	at selenium.pageobjects.Common.PricingModal.clicSubscribeNow(PricingModal.java:60)
-	at Sanity.PaymentTest.Payment(PaymentTest.java:43)
+	at selenium.pageobjects.login.LoginPage.clickFacebookBtnAfterClickingStartNowBtn(LoginPage.java:83)
+	at Sanity.FacebookAuthFromStartNowBtnTest.FacebookLogin(FacebookAuthFromStartNowBtnTest.java:58)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -166,6 +166,8 @@ Session ID: 3439728cbbfe1fec1925350da68f6a1f
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 
 </div> <!-- stack-trace -->
+                  <em>
+(this test performs a login to artlist site through Facebook after clicking the start now  button)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,7 +175,7 @@ Session ID: 3439728cbbfe1fec1925350da68f6a1f
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Ilan Amgar\AppData\Local\Temp\testng-eclipse-828702536\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Ilan Amgar\AppData\Local\Temp\testng-eclipse-70038683\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -182,7 +184,7 @@ Session ID: 3439728cbbfe1fec1925350da68f6a1f
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Sanity.PaymentTest&quot;/&gt;
+      &lt;class name=&quot;Sanity.FacebookAuthFromStartNowBtnTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -224,9 +226,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Payment')
-data.setCell(0, 2, 'Sanity.PaymentTest')
-data.setCell(0, 3, 10575);
+data.setCell(0, 1, 'FacebookLogin')
+data.setCell(0, 2, 'Sanity.FacebookAuthFromStartNowBtnTest')
+data.setCell(0, 3, 10702);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -257,33 +259,41 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Sanity.PaymentTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Sanity.FacebookAuthFromStartNowBtnTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">browser</span>
-                <span class="method-start">10009 ms</span>
+                <span class="method-start">4418 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">browserDimension</span>
-                <span class="method-start">10009 ms</span>
+                <span class="method-start">4418 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">disableCookies</span>
-                <span class="method-start">10233 ms</span>
+                <span class="method-start">4651 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUserAgent</span>
-                <span class="method-start">10234 ms</span>
+                <span class="method-start">4652 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Payment</span>
-                <span class="method-start">10234 ms</span>
+                <span class="method-name">FacebookLogin</span>
+                <span class="method-start">4652 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanup</span>
+                <span class="method-start">15357 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">16190 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

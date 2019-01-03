@@ -12,7 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import selenium.SeleniumTestWrapper;
@@ -28,12 +27,13 @@ import selenium.utils.annotations.browser.Browsers;
 @Browser(skip = { INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX })
 
 
-public class PaymentTest extends SeleniumTestWrapper {
+public class PricingPaymentModal extends SeleniumTestWrapper {
 
     WebDriver driver = getDriver();
 
     StartPage startPage = PageFactory.initElements(driver, StartPage.class);
     SiteHeader siteHeader = PageFactory.initElements(driver, SiteHeader.class);
+    PricingPaymentModal pricingPaymentModal = PageFactory.initElements(driver, PricingPaymentModal.class);
     PricingModal pricingModal = PageFactory.initElements(driver, PricingModal.class);
 
     @BeforeTest
@@ -42,9 +42,8 @@ public class PaymentTest extends SeleniumTestWrapper {
      }
 
    
-	@Test(groups ={"Artlist"}, description = "this test should enter a valid card and should be succeeded")
+	@Test(description = "this test should enter a valid card and should be succeeded")
     public void PaymentTestSuccess() throws InterruptedException {
-		
 		
         siteHeader.clickOnPricingBtn();
         Thread.sleep(2000);
@@ -52,38 +51,10 @@ public class PaymentTest extends SeleniumTestWrapper {
         
         driver.manage().window().maximize();
         
-        Thread.sleep(2000);
-        pricingModal.clickVisaRadioBtn();
-        
-        pricingModal.switchToVisaIframe();
        
-        pricingModal.setVisaCardNumber("4263982640269299");
-        driver.switchTo().defaultContent();
-        
-        
-       pricingModal.switchToMonthYearIframe();
-      
-       
-       pricingModal.setVisaMonth("04");
-       pricingModal.setVisaYear("23");
-       driver.switchTo().defaultContent();
-     
-       
-       pricingModal.switchToCVVIframe();
-       pricingModal.setCVVnumber("837");
-       
-  
-       driver.switchTo().defaultContent();
-       
-       pricingModal.setCardHolderName("ilan amgar");
-        
-        Thread.sleep(3000);
-             
-       pricingModal.clickLastStepToSubscribe();
-       
-       Thread.sleep(10000);
-     
-        
     }
+
+
+	
 }
 

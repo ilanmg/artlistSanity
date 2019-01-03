@@ -11,16 +11,21 @@ public class SiteHeader extends Pages {
         super(driver);
     }
 
-    @FindBy(id = "user-login-btn")
-    private WebElement signIn;
+
+
+    @FindBy(css = "#user-login-btn")
+    private WebElement sginInbtn;
+
+    @FindBy(css = "div.login > a#user-logined-btn")
+    private WebElement accountBtn;
 
     @FindBy(css = ".start-btn.topsign")
     private WebElement startNowBtn;
 
-    @FindBy(css = ".price-btn.for-new")
+    @FindBy(css = "div.login >.price-btn.for-new")
     private WebElement pricingBtn;
 
-    @FindBy(linkText="Start Now")
+    @FindBy(css="div.login > a.start-btn")
     private WebElement startnowbtnInput;
 
 
@@ -28,9 +33,9 @@ public class SiteHeader extends Pages {
 
 
     public WebElement clickOnSignIn() {
-        waitForElement(signIn, 10);
-        signIn.click();
-        return signIn;
+        waitForElement(sginInbtn, 10);
+        sginInbtn.click();
+        return sginInbtn;
     }
 
     public WebElement clickOnStartNowIn() {
@@ -50,6 +55,11 @@ public class SiteHeader extends Pages {
         waitForElement(startnowbtnInput, 10);
         startnowbtnInput.click();
         return startnowbtnInput;
+    }
+
+    public String getAccountValue() {
+        waitForElement(accountBtn, 10);
+        return accountBtn.getText();
     }
 
 

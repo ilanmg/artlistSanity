@@ -2,8 +2,11 @@ package selenium;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import static org.junit.Assume.assumeFalse;
 import static org.junit.Assume.assumeTrue;
+
+import org.junit.After;
 import org.junit.Rule;
 import org.openqa.selenium.WebDriver;
 import selenium.configurations.TestConfig;
@@ -17,81 +20,88 @@ import selenium.utils.annotations.browser.BrowserDimension;
 import selenium.utils.annotations.browser.Browsers;
 
 
-public abstract class SeleniumTestWrapper {
+public abstract class SeleniumTestWrapper<WinHandle> {
 
-	// Config
-	protected static final TestConfig testConfig = new TestConfig();
-	private final WebDriverConfig webDriverConfig = new WebDriverConfig();
-	protected final WebDriverProvider webDriverProvider = new WebDriverProvider(this.webDriverConfig);
+    // Config
+    protected static final TestConfig testConfig = new TestConfig();
+    private final WebDriverConfig webDriverConfig = new WebDriverConfig();
+    protected final WebDriverProvider webDriverProvider = new WebDriverProvider(this.webDriverConfig);
 
-	@Rule
-	public RepeatRule repeatRule = new RepeatRule();
+    @Rule
+    public RepeatRule repeatRule = new RepeatRule();
+    private Object driver;
 
-	protected WebDriver getDriver() {
-		return this.webDriverProvider.getDriver();
-	}
+    protected WebDriver getDriver() {
+        return this.webDriverProvider.getDriver();
+    }
 
-	/**
-	 * test class annotations
-	 */
-	@BeforeMethod
-	public void setUserAgent(){
-		
-		UserAgent userAgent = this.getClass().getAnnotation(UserAgent.class);
-		if (userAgent != null) {
-			webDriverProvider.useUserAgent(userAgent.value());
-		}
-	}
+    protected void maximize() {
+        this.getDriver().manage().window().maximize();
+    }
 
-	@BeforeMethod
-	public void disableCookies(){
-		DisableCookies cookies = this.getClass().getAnnotation(DisableCookies.class);
-		if (cookies != null) {
-			webDriverProvider.disableCookies(true);
-		}
-	}
+    /**
+     * test class annotations
+     */
+    @BeforeMethod
+    public void setUserAgent() {
 
-	@BeforeMethod
-	public void browser() throws Exception {
-		Browser browser = this.getClass().getAnnotation(Browser.class);
-		if (browser != null){
-			if (browser.require().length > 0 && browser.skip().length == 0){
-				String browsers = concatinateBrowsers(browser.require());
-				assumeTrue("only execute test against " + browsers, browsers.contains(testConfig.getBrowser()));
-			}
+        UserAgent userAgent = this.getClass().getAnnotation(UserAgent.class);
+        if (userAgent != null) {
+            webDriverProvider.useUserAgent(userAgent.value());
+        }
+    }
 
-			if (browser.skip().length > 0 && browser.require().length == 0){
-				String browsers = concatinateBrowsers(browser.skip());
-				assumeFalse("skip test against " + browsers, browsers.contains(testConfig.getBrowser()));
-			}
-		}
-	}
+    public void switchWindowHandeler(String winHandle) {
+        this.getDriver().switchTo().window(winHandle);
+    }
 
-	private String concatinateBrowsers(Browsers[] browsers){
-		String concatinatedBrowsers = "";
-		for(Browsers browser : browsers) concatinatedBrowsers += browser.getValue() + " & ";
-		return concatinatedBrowsers.substring(0,concatinatedBrowsers.lastIndexOf("&"));
-	}
+    @BeforeMethod
+    public void disableCookies() {
+        DisableCookies cookies = this.getClass().getAnnotation(DisableCookies.class);
+        if (cookies != null) {
+            webDriverProvider.disableCookies(true);
+        }
+    }
 
-	@BeforeMethod
-	public void browserDimension(){
-		BrowserDimension browserDimension = this.getClass().getAnnotation(BrowserDimension.class);
-		if (browserDimension != null) {
-			getDriver().manage().window().setSize(browserDimension.value().dimension);
-		}
-	}
+    @BeforeMethod
+    public void browser() throws Exception {
+        Browser browser = this.getClass().getAnnotation(Browser.class);
+        if (browser != null) {
+            if (browser.require().length > 0 && browser.skip().length == 0) {
+                String browsers = concatinateBrowsers(browser.require());
+                assumeTrue("only execute test against " + browsers, browsers.contains(testConfig.getBrowser()));
+            }
 
-	
-	@AfterMethod
-	public void closeBrowser(){
-		getDriver().quit();
-	}
-	
-	@AfterMethod 
-	public void cleanup(){
-		getDriver().quit();
-	}
-	
+            if (browser.skip().length > 0 && browser.require().length == 0) {
+                String browsers = concatinateBrowsers(browser.skip());
+                assumeFalse("skip test against " + browsers, browsers.contains(testConfig.getBrowser()));
+            }
+        }
+    }
 
+    private String concatinateBrowsers(Browsers[] browsers) {
+        String concatinatedBrowsers = "";
+        for (Browsers browser : browsers) concatinatedBrowsers += browser.getValue() + " & ";
+        return concatinatedBrowsers.substring(0, concatinatedBrowsers.lastIndexOf("&"));
+    }
+
+    @BeforeMethod
+    public void browserDimension() {
+        BrowserDimension browserDimension = this.getClass().getAnnotation(BrowserDimension.class);
+        if (browserDimension != null) {
+            getDriver().manage().window().setSize(browserDimension.value().dimension);
+        }
+    }
+
+   
+    @AfterMethod
+    public void closeBrowser() {
+        getDriver().quit();
+    }
+
+    @AfterMethod
+    public void cleanup() {
+        getDriver().quit();
+    }
 
 }

@@ -9,21 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">20,813</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">16,192</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Sanity.PaymentTest</td><td><a href="#m0">Payment</a></td><td rowspan="1">1545824362981</td><td rowspan="1">10575</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Sanity.FacebookAuthFromStartNowBtnTest</td><td><a href="#m0">FacebookLogin</a></td><td rowspan="1">1546502701421</td><td rowspan="1">10702</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Sanity.PaymentTest#Payment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (3439728cbbfe1fec1925350da68f6a1f)] -&gt; class name: pricing-subscribe-now-paypal] (tried for 10 second(s) with 500 MILLISECONDS interval)
+<h2>Default test</h2><h3 id="m0">Sanity.FacebookAuthFromStartNowBtnTest#FacebookLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (49dd9f4486ec0673c02647dfbc08a07a)] -&gt; css selector: button.btn.btn-default.loginBtn.loginBtn--Facebook] (tried for 10 second(s) with 500 MILLISECONDS interval)
 Build info: version: &apos;3.0.0&apos;, revision: &apos;350cf60&apos;, time: &apos;2016-10-13 10:48:57 -0700&apos;
 System info: host: &apos;DESKTOP-KMFJ2QA&apos;, ip: &apos;10.0.0.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:65297}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb), userDataDir=C:\Users\ILANAM~1\AppData\Local\Temp\scoped_dir30172_5711}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.110, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3439728cbbfe1fec1925350da68f6a1f
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:60965}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.7 (efcef9a3ecda02b2132af215116a03852d08b9cb), userDataDir=C:\Users\ILANAM~1\AppData\Local\Temp\scoped_dir10932_30202}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 49dd9f4486ec0673c02647dfbc08a07a
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
 	at selenium.SeleniumFunctions.waitForElement(SeleniumFunctions.java:86)
-	at selenium.pageobjects.Common.PricingModal.clicSubscribeNow(PricingModal.java:60)
-	at Sanity.PaymentTest.Payment(PaymentTest.java:43)
+	at selenium.pageobjects.login.LoginPage.clickFacebookBtnAfterClickingStartNowBtn(LoginPage.java:83)
+	at Sanity.FacebookAuthFromStartNowBtnTest.FacebookLogin(FacebookAuthFromStartNowBtnTest.java:58)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

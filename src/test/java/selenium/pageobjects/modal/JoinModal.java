@@ -47,10 +47,5 @@ public class JoinModal extends Pages {
         return joinUsBtn;
     }
 
-//    public void closeModal();
-//    public void emailIsValid();
-//    public void passWordIsValid();
-//    public void joinUsModalIsDisplayed();
-
 
 }
