@@ -1,4 +1,4 @@
-package selenium.testcases;
+package Sanity;
 
 import static selenium.utils.annotations.browser.Browsers.EDGE;
 import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
@@ -32,7 +32,7 @@ import selenium.utils.annotations.browser.Browsers;
 @Browser(skip = { INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX })
 
 
-public class FacebookAuthFromStartNowBtnTest extends SeleniumTestWrapper {
+public class GoogleAuthFromStartNowBtnTest extends SeleniumTestWrapper {
 
     WebDriver driver = getDriver();
 
@@ -47,28 +47,24 @@ public class FacebookAuthFromStartNowBtnTest extends SeleniumTestWrapper {
      }
 
    	
-	@Test(description = "this test performs a login to artlist site through Facebook after clicking the start now  button")
-    public void FacebookLogin() throws InterruptedException, IOException {
+	@Test(groups ={"Artlist"}, description = "this test performs a login to artlist site through Google after clicking the Start Now button")
+    public void GoogleLogin() throws InterruptedException, IOException {
 
         String artlistWindowUrl = driver.getCurrentUrl();
-        
-        siteHeader.clickStartNowBtn();
+        siteHeader.clickOnSignIn();
         maximize();
 
-        loginPage.clickFacebookBtnAfterClickingStartNowBtn();
-        Thread.sleep(10000);
-        facebookGoogleAuth.switchToGoogleForm();
-       
-        facebookGoogleAuth.setFacebookmailOrPhone("ilanmgr@gmail.com");
-                      
-        facebookGoogleAuth.setFacebookPassword("Tomido12*");
+        loginPage.clickGoogletnAfterClickingStartNowBtn();
         
-        facebookGoogleAuth.clickOnFacebookLoginBtn();
+        facebookGoogleAuth.switchToGoogleForm();
+        facebookGoogleAuth.setGoogleEmailOrPhone("ilanmg@artlist.io");
+        facebookGoogleAuth.clickOnGoogleNextBtn();
+        facebookGoogleAuth.setGooglePassword("Tomido1212*");
+        facebookGoogleAuth.clickOnGoogleLoginBtn();
 
         facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
         System.out.println(siteHeader.getAccountValue());
-        Assert.assertEquals("unlimited's Music",siteHeader.getAccountValue());
-        Thread.sleep(20000);
+        Assert.assertEquals("ilan's Music",siteHeader.getAccountValue());
     }
 }
 

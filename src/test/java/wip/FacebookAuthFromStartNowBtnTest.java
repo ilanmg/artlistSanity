@@ -32,7 +32,7 @@ import selenium.utils.annotations.browser.Browsers;
 @Browser(skip = { INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX })
 
 
-public class FacebookAuthFromSignInBtnTest extends SeleniumTestWrapper {
+public class FacebookAuthFromStartNowBtnTest extends SeleniumTestWrapper {
 
     WebDriver driver = getDriver();
 
@@ -47,17 +47,17 @@ public class FacebookAuthFromSignInBtnTest extends SeleniumTestWrapper {
      }
 
    	
-	@Test(groups ={"Artlist"}, description = "this test performs a login to artlist site through Facebook after clicking the sign in button")
+	@Test(description = "this test performs a login to artlist site through Facebook after clicking the start now  button")
     public void FacebookLogin() throws InterruptedException, IOException {
 
         String artlistWindowUrl = driver.getCurrentUrl();
-        siteHeader.clickOnSignIn();
-        maximize();
         
-        loginPage.clickFacebookBtn();
+        siteHeader.clickStartNowBtn();
+        maximize();
       
-        facebookGoogleAuth.switchToGoogleForm();
+        loginPage.clickFacebookBtnAfterClickingStartNowBtn();
        
+        facebookGoogleAuth.switchToGoogleForm(); 
        
         facebookGoogleAuth.setFacebookmailOrPhone("ilanmgr@gmail.com");
                       
@@ -68,7 +68,7 @@ public class FacebookAuthFromSignInBtnTest extends SeleniumTestWrapper {
         facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
         System.out.println(siteHeader.getAccountValue());
         Assert.assertEquals("unlimited's Music",siteHeader.getAccountValue());
-       
+        Thread.sleep(20000);
     }
 }
 
