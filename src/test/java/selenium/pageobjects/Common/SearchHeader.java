@@ -17,7 +17,7 @@ public class SearchHeader extends Pages {
     @FindBy(css="a.category-item-in-search-bar")
     private WebElement resultInput;
 
-    @FindBy(css="a.artist-page-opener")
+    @FindBy(className="artist-page-opener")
     private WebElement resultLeadsToArtlistPage;
 
     @FindBy(className="tag-link")
@@ -26,7 +26,7 @@ public class SearchHeader extends Pages {
     @FindBy(css="#tagslist > li > a.remove-tag-link")
     private WebElement removeResultInput;
 
-    @FindBy(className="trigger")
+    @FindBy(xpath="//div[@class='trigger']")
     private WebElement triggerInput;
 
     @FindBy(css="div.trigger")
@@ -36,7 +36,11 @@ public class SearchHeader extends Pages {
     private WebElement searcByMagnifier;
 
 
-
+    public WebElement clickTriggerIcon() {
+        waitForElement(triggerInput, 10);
+        triggerInput.click();
+        return triggerInput;
+    }
 
     public WebElement clickSearchIcon() {
         waitForElement(searchInput, 10);
@@ -56,11 +60,13 @@ public class SearchHeader extends Pages {
         return closeResultInput;
     }
 
-    public WebElement clickResultToGetTArtlistPage() {
+    public WebElement clickResultToGetArtlistPage(){
         waitForElement(resultLeadsToArtlistPage, 10);
         resultLeadsToArtlistPage.click();
         return resultLeadsToArtlistPage;
     }
+    
+   
 
     public WebElement closeResult() {
         waitForElement(closeResultInput, 10);
@@ -75,11 +81,7 @@ public class SearchHeader extends Pages {
     }
 
 
-    public WebElement clickTriggerIcon() {
-        waitForElement(triggerInput, 10);
-        triggerInput.click();
-        return triggerInput;
-    }
+   
 
     public WebElement closeTriggerIcon() {
         waitForElement(closingTriggerInput, 10);

@@ -3,7 +3,7 @@
 <suite name="Artlist" thread-count="1" parallel="tests">
     <test name="Artlist">
         <packages>
-            <package name="Artlist"/>
+            <package name="development"/>
         </packages>
     </test>
 </suite>

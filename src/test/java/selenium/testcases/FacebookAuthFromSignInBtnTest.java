@@ -1,4 +1,4 @@
-package Sanity;
+package selenium.testcases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -47,18 +47,18 @@ public class FacebookAuthFromSignInBtnTest extends SeleniumTestWrapper {
         
         loginPage.clickFacebookBtn();
       
-        facebookGoogleAuth.switchToGoogleForm();
+        facebookGoogleAuth.switchToFaceBookForm();
               
         facebookGoogleAuth.setFacebookmailOrPhone("ilanmgr@gmail.com");
-                      
+        
         facebookGoogleAuth.setFacebookPassword("Tomido12*");
         
         facebookGoogleAuth.clickOnFacebookLoginBtn();
-
+       
         facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
         System.out.println(siteHeader.getAccountValue());
         Assert.assertEquals("unlimited's Music",siteHeader.getAccountValue());
-       
+        Thread.sleep(150000);
     }
 }
 

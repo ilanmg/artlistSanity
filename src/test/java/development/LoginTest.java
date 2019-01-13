@@ -1,4 +1,4 @@
-package selenium.testcases;
+package development;
 
 import static selenium.utils.annotations.browser.Browsers.EDGE;
 import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
@@ -37,9 +37,10 @@ public class LoginTest extends SeleniumTestWrapper {
     @Test(groups ={"Sanity"}, description= "the script should perform a login by giving the Email, Pass, and click the login button")
     public void login() throws InterruptedException {
     	
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("user-login-btn")));
-        driver.findElement(By.id("user-login-btn")).click();
-
+       // wait.until(ExpectedConditions.elementToBeClickable(By.id("user-login-btn")));
+      //  driver.findElement(By.id("user-login-btn")).click();
+Thread.sleep(5000);
+        loginPage.clickSignInBtn();
         loginPage.setEmail("Login@test.com");
         loginPage.setPassword("qaw1234");
         loginPage.clickLoginBtn();

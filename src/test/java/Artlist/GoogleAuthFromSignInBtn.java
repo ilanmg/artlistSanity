@@ -1,11 +1,4 @@
-package development;
-
-import static selenium.utils.annotations.browser.Browsers.EDGE;
-import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
-import static selenium.utils.annotations.browser.Browsers.PHANTOMJS;
-import static selenium.utils.browser.Screen.XLARGE;
-
-import java.io.IOException;
+package Artlist;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -13,12 +6,18 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import selenium.SeleniumTestWrapper;
-import selenium.pageobjects.Common.*;
+import selenium.pageobjects.Common.FacebookGoogleAuth;
+import selenium.pageobjects.Common.SiteHeader;
 import selenium.pageobjects.StartPage;
 import selenium.pageobjects.login.LoginPage;
 import selenium.utils.annotations.browser.Browser;
 import selenium.utils.annotations.browser.BrowserDimension;
 import selenium.utils.annotations.browser.Browsers;
+
+import java.io.IOException;
+
+import static selenium.utils.annotations.browser.Browsers.*;
+import static selenium.utils.browser.Screen.XLARGE;
 
 @SuppressWarnings("rawtypes")
 @BrowserDimension(XLARGE)

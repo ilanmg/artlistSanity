@@ -1,12 +1,15 @@
 package selenium;
 
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import static org.junit.Assume.assumeFalse;
 import static org.junit.Assume.assumeTrue;
 
-import org.junit.After;
+import java.lang.reflect.Method;
+
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.openqa.selenium.WebDriver;
 import selenium.configurations.TestConfig;
@@ -44,7 +47,6 @@ public abstract class SeleniumTestWrapper<WinHandle> {
      */
     @BeforeMethod
     public void setUserAgent() {
-
         UserAgent userAgent = this.getClass().getAnnotation(UserAgent.class);
         if (userAgent != null) {
             webDriverProvider.useUserAgent(userAgent.value());
@@ -92,16 +94,25 @@ public abstract class SeleniumTestWrapper<WinHandle> {
             getDriver().manage().window().setSize(browserDimension.value().dimension);
         }
     }
+    
+    @BeforeMethod
+    public void printTestInfo(Method method) {
+
+    	 System.out.println("starting Test name: " + method.getName());       
+    }
+
 
    
     @AfterMethod
+    public void closeBrowser(ITestResult result) {
+        getDriver().quit();
+        System.out.println("finish method name:" + result.getMethod().getMethodName());
+    }
+    
+    @AfterClass
     public void closeBrowser() {
         getDriver().quit();
     }
 
-    @AfterMethod
-    public void cleanup() {
-        getDriver().quit();
-    }
 
 }

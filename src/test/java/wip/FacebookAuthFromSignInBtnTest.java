@@ -1,4 +1,4 @@
-package selenium.testcases;
+package wip;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -46,18 +46,28 @@ public class FacebookAuthFromSignInBtnTest extends SeleniumTestWrapper {
         maximize();
         
         loginPage.clickFacebookBtn();
-      
-        facebookGoogleAuth.switchToGoogleForm();
-              
-        facebookGoogleAuth.setFacebookmailOrPhone("ilanmgr@gmail.com");
-                      
-        facebookGoogleAuth.setFacebookPassword("Tomido12*");
         
-        facebookGoogleAuth.clickOnFacebookLoginBtn();
+        Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
+        facebookGoogleAuth.switchToFaceBookForm();
 
-        facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
-        System.out.println(siteHeader.getAccountValue());
-        Assert.assertEquals("unlimited's Music",siteHeader.getAccountValue());
+        if (facebookGoogleAuth.isFaceBookAllreadyAssign()) {
+
+              
+            facebookGoogleAuth.setFacebookmailOrPhone("ilanmgr@gmail.com");
+            facebookGoogleAuth.setFacebookPassword("Tomido1212*");
+            Thread.sleep(100000000);
+            facebookGoogleAuth.clickOnFacebookLoginBtn();
+            facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
+            Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
+        } else {
+
+            facebookGoogleAuth.setFacebookIncognitoEmail("ilanmg@artlist.io");
+            facebookGoogleAuth.setFacebookIncognitoPassword("Tomido1212*");
+            facebookGoogleAuth.clickFacebookIncognitoLoginBtn();
+            facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
+        }
+
+        Assert.assertEquals(false, siteHeader.startBtnIsDisplayed());
        
     }
 }

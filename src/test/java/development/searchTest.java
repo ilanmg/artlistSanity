@@ -1,4 +1,4 @@
-package selenium.testcases;
+package development;
 
 
 import org.testng.annotations.BeforeTest;
@@ -38,7 +38,7 @@ public class searchTest extends SeleniumTestWrapper {
     @Test(groups ={"sanity"},  description= "the script is searching for a letter, then picks up the the first result")
     public void search() throws InterruptedException {
 
-        Thread.sleep(2000);
+       
         searchHeader.clickTriggerIcon();
        
         searchHeader.clickSearchIcon().sendKeys("a");
