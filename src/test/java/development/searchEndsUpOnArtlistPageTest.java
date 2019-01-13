@@ -1,15 +1,13 @@
-package selenium.testcases;
+package development;
 
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import selenium.SeleniumTestWrapper;
-import selenium.pageobjects.Common.Modals;
 import selenium.pageobjects.Common.SearchHeader;
 import selenium.pageobjects.StartPage;
-import selenium.pageobjects.login.LoginPage;
 import selenium.utils.annotations.browser.Browser;
 import selenium.utils.annotations.browser.BrowserDimension;
 import selenium.utils.annotations.browser.Browsers;
@@ -22,9 +20,10 @@ import static selenium.utils.browser.Screen.XLARGE;
 public class searchEndsUpOnArtlistPageTest extends SeleniumTestWrapper {
 
     StartPage startPage = PageFactory.initElements(getDriver(), StartPage.class);
-    LoginPage loginPage = PageFactory.initElements(getDriver(), LoginPage.class);
+    SearchHeader SearchHeader = PageFactory.initElements(getDriver(), SearchHeader.class);
+    
     WebDriver driver = startPage.getDriver();
-    Modals modals = PageFactory.initElements(getDriver(), Modals.class);
+    WebDriverWait wait = new WebDriverWait(driver, 1);
 
     @BeforeTest
     public void setup() {
@@ -34,15 +33,11 @@ public class searchEndsUpOnArtlistPageTest extends SeleniumTestWrapper {
     @Test(groups ={"Artlist"},  description= "the script is searching for certain artist and then taks the user into the artists page")
     public void search() throws InterruptedException {
 
-        SearchHeader SearchHeader = PageFactory.initElements(getDriver(), SearchHeader.class);
-
-
         SearchHeader.clickTriggerIcon();
-
         Thread.sleep(5000);
-        SearchHeader.clickSearchIcon().sendKeys("ian post");
-        SearchHeader.clickResultToGetTArtlistPage().sendKeys("ian post"); 
-        Thread.sleep(5000);
+       SearchHeader.clickSearchIcon().sendKeys("ian post");
+      SearchHeader.clickResultToGetArtlistPage();
+      Thread.sleep(5000);
 
     }
 }

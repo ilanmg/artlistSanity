@@ -1,29 +1,23 @@
-package selenium.testcases;
+package development;
 
-import static selenium.utils.annotations.browser.Browsers.EDGE;
-import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
-import static selenium.utils.annotations.browser.Browsers.PHANTOMJS;
-import static selenium.utils.browser.Screen.XLARGE;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import selenium.SeleniumTestWrapper;
-//import selenium.pageobjects.Common.PricingPaymentModal;
+import selenium.pageobjects.Common.PricingModal;
 import selenium.pageobjects.Common.SiteHeader;
 import selenium.pageobjects.StartPage;
-import selenium.pageobjects.Common.PricingModal;
 import selenium.utils.annotations.browser.Browser;
 import selenium.utils.annotations.browser.BrowserDimension;
 import selenium.utils.annotations.browser.Browsers;
 
+import static selenium.utils.annotations.browser.Browsers.*;
+import static selenium.utils.browser.Screen.XLARGE;
+
+//import selenium.pageobjects.Common.PricingPaymentModal;
+
+@SuppressWarnings("rawtypes")
 @BrowserDimension(XLARGE)
 @Browser(skip = { INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX })
 
@@ -52,7 +46,7 @@ public class PaymentTest extends SeleniumTestWrapper {
         
         driver.manage().window().maximize();
         
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         pricingModal.clickVisaRadioBtn();
         
         pricingModal.switchToVisaIframe();
@@ -81,9 +75,7 @@ public class PaymentTest extends SeleniumTestWrapper {
              
        pricingModal.clickLastStepToSubscribe();
        
-       Thread.sleep(10000);
-     
-        
+       
     }
 }
 

@@ -7,10 +7,9 @@ import selenium.Pages;
 
 public class SiteHeader extends Pages {
 
-    public SiteHeader (WebDriver driver) {
+    public SiteHeader(WebDriver driver) {
         super(driver);
     }
-
 
 
     @FindBy(css = "#user-login-btn")
@@ -25,11 +24,8 @@ public class SiteHeader extends Pages {
     @FindBy(css = "div.login >.price-btn.for-new")
     private WebElement pricingBtn;
 
-    @FindBy(css="div.login > a.start-btn")
+    @FindBy(css = "div.login > a.start-btn")
     private WebElement startnowbtnInput;
-
-
-
 
 
     public WebElement clickOnSignIn() {
@@ -62,7 +58,9 @@ public class SiteHeader extends Pages {
         return accountBtn.getText();
     }
 
-
+    public boolean startBtnIsDisplayed() {
+        return isElementVisible(startNowBtn);
+    }
 
 
 }

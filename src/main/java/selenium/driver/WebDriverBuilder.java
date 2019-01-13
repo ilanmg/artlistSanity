@@ -1,5 +1,6 @@
 package selenium.driver;
 
+import static java.lang.Boolean.parseBoolean;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 import org.openqa.selenium.WebDriver;

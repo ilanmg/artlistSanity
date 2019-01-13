@@ -1,5 +1,6 @@
 package selenium.driver;
 
+import static java.lang.Boolean.parseBoolean;
 import static org.openqa.selenium.phantomjs.PhantomJSDriverService.PHANTOMJS_CLI_ARGS;
 
 import java.util.logging.Level;
@@ -39,6 +40,9 @@ class DesiredCapabilitiesFactory {
 //			options.addArguments("--headless");
 			options.addArguments("start-maximized");
 			options.addArguments("user-agent=" + userAgent);
+			if(parseBoolean(System.getProperty("incognito"))){
+				options.addArguments("incognito");
+			}
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 		}
 

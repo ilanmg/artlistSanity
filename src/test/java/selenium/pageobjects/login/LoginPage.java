@@ -10,6 +10,9 @@ public class LoginPage extends Pages {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
+    
+    @FindBy(id = "user-login-btn")
+    private WebElement signInBtn;
 
     @FindBy(css = "form .join-link")
     private WebElement loginForm;
@@ -35,10 +38,17 @@ public class LoginPage extends Pages {
     @FindBy(css ="form button.loginBtn--Facebook")
     private WebElement facebookBtnLogin;
     
-    @FindBy(css = "button.btn.btn-default.loginBtn.loginBtn--Facebook")
+    @FindBy(xpath = "//*[@id=\"visitor-signup\"]/div/div/div/div/div[2]/div[2]/form/button")
     private WebElement FacebookElementFromStartNowBtn;
 
 
+    
+    public WebElement clickSignInBtn() {
+        waitForElement(signInBtn, 10);
+        signInBtn.click();
+        return signInBtn;
+
+    }
 
     public void setEmail(String email){
         waitForElement(logemail, 10);
