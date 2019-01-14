@@ -1,4 +1,4 @@
-package development;
+package Sanity;
 
 
 import org.testng.annotations.BeforeTest;

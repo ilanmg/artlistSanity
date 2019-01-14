@@ -3,18 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="wip.FacebookAuthFromSignInBtnTest">
+      <class name="Sanity.GoogleAuthFromSignInBtn">
         <methods>
           <include name="printTestInfo"/>
           <include name="setUserAgent"/>
+          <include name="GoogleLogin"/>
           <include name="setup"/>
           <include name="browser"/>
           <include name="disableCookies"/>
-          <include name="FacebookLogin"/>
           <include name="browserDimension"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- wip.FacebookAuthFromSignInBtnTest -->
+      </class> <!-- Sanity.GoogleAuthFromSignInBtn -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

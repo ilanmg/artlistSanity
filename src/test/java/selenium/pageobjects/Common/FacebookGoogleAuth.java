@@ -136,7 +136,7 @@ public class FacebookGoogleAuth extends Pages {
 
 
 
-    //not incognito
+    //Google
     public WebElement setGoogleEmailOrPhone(String email) {
         waitForElement(googleEmailOrPhoneInput, 30);
         googleEmailOrPhoneInput.sendKeys(email);

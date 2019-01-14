@@ -1,4 +1,4 @@
-package development;
+package Sanity;
 
 import static selenium.utils.annotations.browser.Browsers.EDGE;
 import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
