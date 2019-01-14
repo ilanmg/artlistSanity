@@ -42,21 +42,23 @@ public class FacebookGoogleAuth extends Pages {
 
 
     //Facebook
-    @FindBy(id = "logemail")
+    @FindBy(id = "#m_login_email")
     private WebElement setFacebookLoginEmail;
     
-    @FindBy(id = "m_login_password")
+    @FindBy(id = "#m_login_password")
     private WebElement setFacebookPassword;
     
     @FindBy(css = "#login_form > ul > li:nth-child(3) > input")
     private WebElement clickFacebookLoginBtn;
 
-
+    @FindBy(css = "#u_0_5")
+    private WebElement clickFacebookLoginBtnInput;
+    
     //Facebook incognito
-    @FindBy(css = "#m_login_email") 
+    @FindBy(css = "#email") 
     private WebElement FacebookLoginEmailInput;
 
-    @FindBy(css = "//*[@id=\"pass\"]")
+    @FindBy(id = "#pass")
     private WebElement FacebookPasswordIncognitoInput;
 
     @FindBy(id = "#loginbutton")
@@ -113,7 +115,7 @@ public class FacebookGoogleAuth extends Pages {
         return googleLastNextIncognitoBtnInput;
     }
 
-    //Facebook incognito
+  //Facebook incognito
     public WebElement setFacebookIncognitoEmail(String email) {
         waitForElement(FacebookLoginEmailInput, 30);
         FacebookLoginEmailInput.sendKeys(email);
@@ -155,6 +157,10 @@ public class FacebookGoogleAuth extends Pages {
 
     }
     
+    public void switchToArtlist(String url) {
+        switchWindow(url);
+    }
+    
     public WebElement setGooglePassword(String password) {
 
         waitForElement(googlePasswordInput, 10);
@@ -168,17 +174,21 @@ public class FacebookGoogleAuth extends Pages {
         return googleLoginBtn;
     }
     
-    public WebElement setFacebookEmailOrPhone(String email) {
-        waitForElement(setFacebookLoginEmail, 30);
-        setFacebookLoginEmail.sendKeys(email);
-        return setFacebookLoginEmail;
-    }
+    public WebElement   clickOnFaceBookNextBtn() {
+        if(this.isFaceBookAllreadyAssign()){
+            waitForElement(clickFacebookLoginBtnInput, 10);
+            clickFacebookLoginBtnInput.click();
+            return clickFacebookLoginBtnInput;
+        }
+        else{
+            waitForElement(googleNextIncognitoBtn, 10);
+            googleNextIncognitoBtn.click();
+            return googleNextIncognitoBtn;
+        }
 
-
-    public void switchToArtlist(String url) {
-        switchWindow(url);
     }
     
+    //Facebook
     public WebElement setFacebookmailOrPhone(String email) {
         waitForElement(setFacebookLoginEmail, 10);
         setFacebookLoginEmail.sendKeys(email);
@@ -198,6 +208,9 @@ public class FacebookGoogleAuth extends Pages {
 
     }
   
-}
+
+   
+    }
+    
 
 

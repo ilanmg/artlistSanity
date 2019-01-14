@@ -39,22 +39,6 @@ public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
         startPage.open();
     }
 
-    /*
-        @Test(groups ={"Sanity"}, description = "this test performs a login to artlist site through Google after clicking the sign in button")
-        public void GoogleIncognitoLogin() throws InterruptedException, IOException {
-
-            String artlistWindowUrl = driver.getCurrentUrl();
-           maximize();
-            siteHeader.clickOnSignIn();
-
-
-           loginPage.clickGoogleBtn();
-
-            facebookGoogleAuth.switchToGoogleForm();
-
-
-        }
-   	*/
     @Test(groups = {"Sanity"}, description = "this test performs a login to artlist site through Google after clicking the sign in button")
     public void GoogleLogin() throws InterruptedException, IOException {
 
@@ -76,7 +60,7 @@ public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
             Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
         } else {
 
-            facebookGoogleAuth.setGoogleEmailOrPhoneIncognito("ilanmg@artlist.io");
+            facebookGoogleAuth.setGoogleEmailOrPhoneIncognito("111ilanmg@artlist.io");
             facebookGoogleAuth.clickOnGoogleNextIncognitoBtn();
             facebookGoogleAuth.setGoogleIncognitoPassword("Tomido1212*");
             facebookGoogleAuth.clickOnGoogleLastNextIncognitoBtn();

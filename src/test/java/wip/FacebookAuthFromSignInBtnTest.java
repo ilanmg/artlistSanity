@@ -53,9 +53,9 @@ public class FacebookAuthFromSignInBtnTest extends SeleniumTestWrapper {
         if (facebookGoogleAuth.isFaceBookAllreadyAssign()) {
 
               
-            facebookGoogleAuth.setFacebookmailOrPhone("ilanmgr@gmail.com");
+            facebookGoogleAuth.setFacebookmailOrPhone("ilanmg@artlist.io");
             facebookGoogleAuth.setFacebookPassword("Tomido1212*");
-            Thread.sleep(100000000);
+            
             facebookGoogleAuth.clickOnFacebookLoginBtn();
             facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
             Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
