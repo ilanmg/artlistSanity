@@ -1,5 +1,6 @@
 package Sanity;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
@@ -41,7 +42,7 @@ public class searchEndsUpOnArtlistPageTest extends SeleniumTestWrapper {
         SearchHeader.clickSearchIcon().sendKeys("ian post");
         
         SearchHeader.clickResultToGetArtlistPage(); 
-        
+        Assert.assertEquals(true, SearchHeader.ResultToGetArtlistPage());
         
 
     }

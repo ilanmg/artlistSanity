@@ -39,6 +39,8 @@ public class SearchHeader extends Pages {
     @FindBy(css=".category-item-in-search-bar")
     private WebElement searchFirstResultInput;
     
+    @FindBy(css="#autoCompleteBox > ul > li > a")
+    private WebElement ResultToGetArtlistPageltInput;
     
     
 
@@ -110,7 +112,11 @@ public class SearchHeader extends Pages {
     public boolean searchFirstResult() {
         return isElementVisible(searchFirstResultInput);
     }
-
+    public boolean ResultToGetArtlistPage() {
+        return isElementVisible(ResultToGetArtlistPageltInput);
+    }
+    
+    
 }
 
 
