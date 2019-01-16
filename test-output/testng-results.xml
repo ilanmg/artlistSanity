@@ -2,61 +2,61 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9619" started-at="2019-01-16T11:28:03Z" finished-at="2019-01-16T11:28:13Z">
+  <suite name="Default suite" duration-ms="9950" started-at="2019-01-16T15:45:08Z" finished-at="2019-01-16T15:45:18Z">
     <groups>
-      <group name="Artlist">
-        <method signature="searchEndsUpOnArtlistPageTest.search()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="search" class="Sanity.searchEndsUpOnArtlistPageTest"/>
-      </group> <!-- Artlist -->
+      <group name="sanity">
+        <method signature="searchTest.search()[pri:0, instance:Sanity.searchTest@14fa86ae]" name="search" class="Sanity.searchTest"/>
+      </group> <!-- sanity -->
     </groups>
-    <test name="Default test" duration-ms="9619" started-at="2019-01-16T11:28:03Z" finished-at="2019-01-16T11:28:13Z">
-      <class name="Sanity.searchEndsUpOnArtlistPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="setup" is-config="true" duration-ms="5474" started-at="2019-01-16T11:28:03Z" finished-at="2019-01-16T11:28:09Z">
+    <test name="Default test" duration-ms="9950" started-at="2019-01-16T15:45:08Z" finished-at="2019-01-16T15:45:18Z">
+      <class name="Sanity.searchTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.searchTest@14fa86ae]" name="setup" is-config="true" duration-ms="7428" started-at="2019-01-16T15:45:08Z" finished-at="2019-01-16T15:45:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="browser" is-config="true" duration-ms="1" started-at="2019-01-16T11:28:09Z" finished-at="2019-01-16T11:28:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browser -->
-        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="browserDimension" is-config="true" duration-ms="227" started-at="2019-01-16T11:28:09Z" finished-at="2019-01-16T11:28:09Z">
+        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.searchTest@14fa86ae]" name="browserDimension" is-config="true" duration-ms="225" started-at="2019-01-16T15:45:15Z" finished-at="2019-01-16T15:45:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserDimension -->
-        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-16T11:28:09Z" finished-at="2019-01-16T11:28:09Z">
+        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.searchTest@14fa86ae]" name="browser" is-config="true" duration-ms="0" started-at="2019-01-16T15:45:15Z" finished-at="2019-01-16T15:45:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.searchTest@14fa86ae]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-16T15:45:15Z" finished-at="2019-01-16T15:45:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- disableCookies -->
-        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="printTestInfo" is-config="true" duration-ms="3" started-at="2019-01-16T11:28:09Z" finished-at="2019-01-16T11:28:09Z">
+        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.searchTest@14fa86ae]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-01-16T15:45:15Z" finished-at="2019-01-16T15:45:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void Sanity.searchEndsUpOnArtlistPageTest.search() throws java.lang.InterruptedException]]>
+                <![CDATA[public void Sanity.searchTest.search() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printTestInfo -->
-        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="setUserAgent" is-config="true" duration-ms="1" started-at="2019-01-16T11:28:09Z" finished-at="2019-01-16T11:28:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUserAgent -->
-        <test-method status="PASS" signature="search()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="search" duration-ms="3100" started-at="2019-01-16T11:28:09Z" description="the script is searching for certain artist and then taks the user into the artists page" finished-at="2019-01-16T11:28:12Z">
+        <test-method status="PASS" signature="search()[pri:0, instance:Sanity.searchTest@14fa86ae]" name="search" duration-ms="1443" started-at="2019-01-16T15:45:15Z" description="the script is searching for a letter, then picks up the the first result" finished-at="2019-01-16T15:45:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="closeBrowser" is-config="true" duration-ms="801" started-at="2019-01-16T11:28:12Z" finished-at="2019-01-16T11:28:13Z">
+        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.searchTest@14fa86ae]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-16T15:45:15Z" finished-at="2019-01-16T15:45:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUserAgent -->
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.searchTest@14fa86ae]" name="closeBrowser" is-config="true" duration-ms="839" started-at="2019-01-16T15:45:17Z" finished-at="2019-01-16T15:45:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=search status=SUCCESS method=searchEndsUpOnArtlistPageTest.search()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19] output={null}]]]>
+                <![CDATA[[TestResult name=search status=SUCCESS method=searchTest.search()[pri:0, instance:Sanity.searchTest@14fa86ae] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- Sanity.searchEndsUpOnArtlistPageTest -->
+      </class> <!-- Sanity.searchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

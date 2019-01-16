@@ -45,7 +45,7 @@ public class searchTest extends SeleniumTestWrapper {
         searchHeader.clickSearchIcon().sendKeys("b");
         
         searchHeader.clickFirstResult();
-        Assert.assertEquals(true, searchHeader.searchFirstResult());
+        Assert.assertEquals(false, searchHeader.searchFirstResult());
     }
 }
 
