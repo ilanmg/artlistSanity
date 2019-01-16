@@ -18,7 +18,7 @@ public class SearchHeader extends Pages {
     @FindBy(css="a.category-item-in-search-bar")
     private WebElement resultInput;
 
-    @FindBy(className="artist-page-opener")
+    @FindBy(css="#autoCompleteBox > ul > li > a")
     private WebElement resultLeadsToArtlistPage;
 
     @FindBy(className="tag-link")

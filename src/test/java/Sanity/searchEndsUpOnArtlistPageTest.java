@@ -42,7 +42,7 @@ public class searchEndsUpOnArtlistPageTest extends SeleniumTestWrapper {
         SearchHeader.clickSearchIcon().sendKeys("ian post");
         
         SearchHeader.clickResultToGetArtlistPage(); 
-        Assert.assertEquals(false, SearchHeader.ResultToGetArtlistPage());
+        Assert.assertEquals(true, SearchHeader.ResultToGetArtlistPage());
         
 
     }
