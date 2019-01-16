@@ -36,7 +36,7 @@ public class SearchHeader extends Pages {
     @FindBy(css=".tob-bar-container i.search-icon")
     private WebElement searcByMagnifier;
 
-    @FindBy(css="#txtSearch")
+    @FindBy(css=".category-item-in-search-bar")
     private WebElement searchFirstResultInput;
     
     
