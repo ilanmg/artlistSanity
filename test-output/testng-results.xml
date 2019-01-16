@@ -2,61 +2,61 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12045" started-at="2019-01-16T16:20:45Z" finished-at="2019-01-16T16:20:57Z">
+  <suite name="Default suite" duration-ms="12762" started-at="2019-01-16T17:12:27Z" finished-at="2019-01-16T17:12:39Z">
     <groups>
       <group name="Sanity">
-        <method signature="FacebookAuthFromSignInBtnTest.FacebookLogin()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="FacebookLogin" class="Sanity.FacebookAuthFromSignInBtnTest"/>
+        <method signature="GoogleAuthFromSignInBtn.GoogleLogin()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="GoogleLogin" class="Sanity.GoogleAuthFromSignInBtn"/>
       </group> <!-- Sanity -->
     </groups>
-    <test name="Default test" duration-ms="12045" started-at="2019-01-16T16:20:45Z" finished-at="2019-01-16T16:20:57Z">
-      <class name="Sanity.FacebookAuthFromSignInBtnTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="setup" is-config="true" duration-ms="5262" started-at="2019-01-16T16:20:45Z" finished-at="2019-01-16T16:20:51Z">
+    <test name="Default test" duration-ms="12762" started-at="2019-01-16T17:12:27Z" finished-at="2019-01-16T17:12:39Z">
+      <class name="Sanity.GoogleAuthFromSignInBtn">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="setup" is-config="true" duration-ms="4942" started-at="2019-01-16T17:12:27Z" finished-at="2019-01-16T17:12:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="browserDimension" is-config="true" duration-ms="224" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
+        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="browserDimension" is-config="true" duration-ms="229" started-at="2019-01-16T17:12:32Z" finished-at="2019-01-16T17:12:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserDimension -->
-        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="browser" is-config="true" duration-ms="0" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
+        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="browser" is-config="true" duration-ms="0" started-at="2019-01-16T17:12:32Z" finished-at="2019-01-16T17:12:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser -->
-        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
+        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-16T17:12:32Z" finished-at="2019-01-16T17:12:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- disableCookies -->
-        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
+        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-01-16T17:12:32Z" finished-at="2019-01-16T17:12:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void Sanity.FacebookAuthFromSignInBtnTest.FacebookLogin() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void Sanity.GoogleAuthFromSignInBtn.GoogleLogin() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printTestInfo -->
-        <test-method status="PASS" signature="FacebookLogin()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="FacebookLogin" duration-ms="5732" started-at="2019-01-16T16:20:51Z" description="this test performs a login to artlist site through Facebook after clicking the sign in button" finished-at="2019-01-16T16:20:57Z">
+        <test-method status="PASS" signature="GoogleLogin()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="GoogleLogin" duration-ms="6746" started-at="2019-01-16T17:12:32Z" description="this test performs a login to artlist site through Google after clicking the sign in button" finished-at="2019-01-16T17:12:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FacebookLogin -->
-        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
+        </test-method> <!-- GoogleLogin -->
+        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-16T17:12:32Z" finished-at="2019-01-16T17:12:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUserAgent -->
-        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="closeBrowser" is-config="true" duration-ms="814" started-at="2019-01-16T16:20:57Z" finished-at="2019-01-16T16:20:57Z">
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="closeBrowser" is-config="true" duration-ms="830" started-at="2019-01-16T17:12:39Z" finished-at="2019-01-16T17:12:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=FacebookLogin status=SUCCESS method=FacebookAuthFromSignInBtnTest.FacebookLogin()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b] output={null}]]]>
+                <![CDATA[[TestResult name=GoogleLogin status=SUCCESS method=GoogleAuthFromSignInBtn.GoogleLogin()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- Sanity.FacebookAuthFromSignInBtnTest -->
+      </class> <!-- Sanity.GoogleAuthFromSignInBtn -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

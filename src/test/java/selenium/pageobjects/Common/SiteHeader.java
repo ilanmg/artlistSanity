@@ -29,7 +29,7 @@ public class SiteHeader extends Pages {
 
 
     public WebElement clickOnSignIn() {
-        waitForElement(sginInbtn, 10);
+        waitForElement(sginInbtn, 20);
         sginInbtn.click();
         return sginInbtn;
     }

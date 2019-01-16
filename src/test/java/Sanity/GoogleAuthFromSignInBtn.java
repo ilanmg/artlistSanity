@@ -64,6 +64,7 @@ public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
             facebookGoogleAuth.setGoogleEmailOrPhoneIncognito("111ilanmg@artlist.io");
             facebookGoogleAuth.clickOnGoogleNextIncognitoBtn();
             facebookGoogleAuth.setGoogleIncognitoPassword("Tomido1212*");
+            Thread.sleep(2000);
             facebookGoogleAuth.clickOnGoogleLastNextIncognitoBtn();
             facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
             Assert.assertEquals(false, siteHeader.startBtnIsDisplayed());
