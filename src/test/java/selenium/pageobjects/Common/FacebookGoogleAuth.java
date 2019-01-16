@@ -109,7 +109,7 @@ public class FacebookGoogleAuth extends Pages {
     }
     
     public WebElement setGoogleIncognitoPassword(String password) {
-        waitForElement(googlePasswordIncognitoInput, 10);
+        waitForElement(googlePasswordIncognitoInput, 30);
         googlePasswordIncognitoInput.sendKeys(password);
         return googlePasswordIncognitoInput;
     }
