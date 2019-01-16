@@ -48,23 +48,24 @@ public class FacebookAuthFromSignInBtnTest extends SeleniumTestWrapper {
         loginPage.clickFacebookBtn();
         
         Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
-        facebookGoogleAuth.switchToFaceBookForm();
+        facebookGoogleAuth.switchToGoogleForm();
 
         if (facebookGoogleAuth.isFaceBookAllreadyAssign()) {
-
+        	  facebookGoogleAuth.setFacebookmailOrPhone("ilanmgr@gmail.com");
+              facebookGoogleAuth.setFacebookPassword("Tomido1212*");
+              facebookGoogleAuth.clickOnFacebookLoginBtn();
+              facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
               
-            facebookGoogleAuth.setFacebookmailOrPhone("ilanmg@artlist.io");
-            facebookGoogleAuth.setFacebookPassword("Tomido1212*");
-            
-            facebookGoogleAuth.clickOnFacebookLoginBtn();
-            facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
-            Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
+              System.out.println(siteHeader.getAccountValue());
+              Assert.assertEquals(false, siteHeader.startBtnIsDisplayed());
+           
         } else {
-
+            
             facebookGoogleAuth.setFacebookIncognitoEmail("ilanmg@artlist.io");
             facebookGoogleAuth.setFacebookIncognitoPassword("Tomido1212*");
             facebookGoogleAuth.clickFacebookIncognitoLoginBtn();
-            facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
+            facebookGoogleAuth.switchToArtlist(artlistWindowUrl); 
+            Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
         }
 
         Assert.assertEquals(false, siteHeader.startBtnIsDisplayed());

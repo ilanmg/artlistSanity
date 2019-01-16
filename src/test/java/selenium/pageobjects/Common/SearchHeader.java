@@ -1,5 +1,6 @@
 package selenium.pageobjects.Common;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,6 +36,11 @@ public class SearchHeader extends Pages {
     @FindBy(css=".tob-bar-container i.search-icon")
     private WebElement searcByMagnifier;
 
+    @FindBy(css="#txtSearch")
+    private WebElement searchFirstResultInput;
+    
+    
+    
 
     public WebElement clickTriggerIcon() {
         waitForElement(triggerInput, 10);
@@ -43,13 +49,19 @@ public class SearchHeader extends Pages {
     }
 
     public WebElement clickSearchIcon() {
-        waitForElement(searchInput, 10);
+    	waitForElement(searchInput, 10);
         searchInput.click();
         return searchInput;
     }
-
-        public WebElement clickFirstResult() {
-        waitForElement(resultInput, 10);
+    /*
+   	public WebElement clickFirstResult() {
+   		waitForElementIsInvisible(By.cssSelector("a.category-item-in-search-bar"));
+   		resultInput.click();
+        return resultInput;
+    }
+   */	
+   	public WebElement clickFirstResult() {
+   		waitForElement(By.cssSelector("a.category-item-in-search-bar"), 40);
         resultInput.click();
         return resultInput;
     }
@@ -94,6 +106,11 @@ public class SearchHeader extends Pages {
         searcByMagnifier.click();
         return searcByMagnifier;
     }
+    
+    public boolean searchFirstResult() {
+        return isElementVisible(searchFirstResultInput);
+    }
+
 }
 
 

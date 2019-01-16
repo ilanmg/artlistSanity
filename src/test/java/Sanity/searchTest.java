@@ -1,6 +1,7 @@
 package Sanity;
 
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
@@ -41,12 +42,10 @@ public class searchTest extends SeleniumTestWrapper {
        
         searchHeader.clickTriggerIcon();
        
-        searchHeader.clickSearchIcon().sendKeys("a");
+        searchHeader.clickSearchIcon().sendKeys("b");
         
-        searchHeader.clickFirstResult().click();
-       
-        
-
+        searchHeader.clickFirstResult();
+        Assert.assertEquals(true, searchHeader.searchFirstResult());
     }
 }
 

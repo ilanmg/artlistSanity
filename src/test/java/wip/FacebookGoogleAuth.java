@@ -1,4 +1,4 @@
-package selenium.pageobjects.Common;
+package wip;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,11 +15,10 @@ public class FacebookGoogleAuth extends Pages {
 
     @FindBy(css = ".card.signin-card")
     private WebElement googleAllreadyAssign;
-
-    @FindBy(css = "#u_0_0")
+    
+    @FindBy(id = "loginform")
     private WebElement FaceBookAllreadyAssign;
-    
-    
+
     //Google incognito
     
     @FindBy(css = "#identifierId")
@@ -53,20 +52,20 @@ public class FacebookGoogleAuth extends Pages {
     @FindBy(css = "#m_login_email")
     private WebElement setFacebookLoginEmail;
     
-    @FindBy(css = "#login_form > ul > li:nth-child(2) > div > input")
+    @FindBy(css = "#m_login_password")
     private WebElement setFacebookPassword;
     
-    @FindBy(css = "#login_form > ul > li:nth-child(3) > input")
+    @FindBy(css = "#u_0_5")
     private WebElement clickFacebookLoginBtnInput;
     
     //Facebook incognito
-    @FindBy(css = "#email")
+    @FindBy(css = "#email") 
     private WebElement FacebookLoginEmailInput;
 
-    @FindBy(css = "#pass")
+    @FindBy(id = "#pass")
     private WebElement FacebookPasswordIncognitoInput;
 
-    @FindBy(xpath = "//*[@id=\"loginbutton\"]")
+    @FindBy(id = "#loginbutton")
     private WebElement FacebookIncognitoLoginBtnInput;
 
 
@@ -76,7 +75,7 @@ public class FacebookGoogleAuth extends Pages {
     }
 
     public boolean isFaceBookAllreadyAssign(){
-        return isElementPresent(FaceBookAllreadyAssign);
+        return isElementPresent(googleAllreadyAssign);
     }
     
     
@@ -195,7 +194,7 @@ public class FacebookGoogleAuth extends Pages {
     
     //Facebook
     public WebElement setFacebookmailOrPhone(String email) {
-        waitForElement(setFacebookLoginEmail, 20);
+        waitForElement(setFacebookLoginEmail, 10);
         setFacebookLoginEmail.sendKeys(email);
         return setFacebookLoginEmail;
     }

@@ -15,7 +15,7 @@ public class SiteHeader extends Pages {
     @FindBy(css = "#user-login-btn")
     private WebElement sginInbtn;
 
-    @FindBy(css = "div.login > a#user-logined-btn")
+    @FindBy(css = "div.login > a#user-login-btn")
     private WebElement accountBtn;
 
     @FindBy(css = ".start-btn.topsign")
@@ -54,7 +54,7 @@ public class SiteHeader extends Pages {
     }
 
     public String getAccountValue() {
-        waitForElement(accountBtn, 10);
+        waitForElement(accountBtn, 20);
         return accountBtn.getText();
     }
 
