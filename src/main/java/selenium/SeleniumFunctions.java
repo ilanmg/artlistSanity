@@ -83,7 +83,7 @@ public abstract class SeleniumFunctions {
 
 	protected void waitForElement(final WebElement element, final int timeoutInSeconds) {
 		final WebDriverWait wait = new WebDriverWait(this.driver, timeoutInSeconds);
-		wait.until(ExpectedConditions.visibilityOf(element));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
 	protected void waitForElement(final By by) {
