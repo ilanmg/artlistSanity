@@ -43,7 +43,7 @@ public class FacebookGoogleAuth extends Pages {
     private WebElement googleNextBtn;
    
     @FindBy(css = "#Passwd" )
-    private WebElement googlePasswordInput;
+    private WebElement googlePasswordInput ;
     
     @FindBy(css = "#signIn")
     private WebElement googleLoginBtn;
