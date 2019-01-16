@@ -195,7 +195,7 @@ public class FacebookGoogleAuth extends Pages {
     
     //Facebook
     public WebElement setFacebookmailOrPhone(String email) {
-        waitForElement(setFacebookLoginEmail, 20);
+        waitForElement(setFacebookLoginEmail, 30);
         setFacebookLoginEmail.sendKeys(email);
         return setFacebookLoginEmail;
     }

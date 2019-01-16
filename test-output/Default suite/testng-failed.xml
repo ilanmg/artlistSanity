@@ -3,18 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Sanity.searchEndsUpOnArtlistPageTest">
+      <class name="Sanity.FacebookAuthFromSignInBtnTest">
         <methods>
           <include name="printTestInfo"/>
-          <include name="search"/>
           <include name="setUserAgent"/>
-          <include name="setup"/>
+          <include name="FacebookLogin"/>
           <include name="browser"/>
+          <include name="setup"/>
           <include name="disableCookies"/>
           <include name="browserDimension"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- Sanity.searchEndsUpOnArtlistPageTest -->
+      </class> <!-- Sanity.FacebookAuthFromSignInBtnTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,61 +2,61 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7024" started-at="2019-01-16T16:00:24Z" finished-at="2019-01-16T16:00:31Z">
+  <suite name="Default suite" duration-ms="12045" started-at="2019-01-16T16:20:45Z" finished-at="2019-01-16T16:20:57Z">
     <groups>
-      <group name="Artlist">
-        <method signature="searchEndsUpOnArtlistPageTest.search()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="search" class="Sanity.searchEndsUpOnArtlistPageTest"/>
-      </group> <!-- Artlist -->
+      <group name="Sanity">
+        <method signature="FacebookAuthFromSignInBtnTest.FacebookLogin()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="FacebookLogin" class="Sanity.FacebookAuthFromSignInBtnTest"/>
+      </group> <!-- Sanity -->
     </groups>
-    <test name="Default test" duration-ms="7024" started-at="2019-01-16T16:00:24Z" finished-at="2019-01-16T16:00:31Z">
-      <class name="Sanity.searchEndsUpOnArtlistPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="setup" is-config="true" duration-ms="4432" started-at="2019-01-16T16:00:24Z" finished-at="2019-01-16T16:00:28Z">
+    <test name="Default test" duration-ms="12045" started-at="2019-01-16T16:20:45Z" finished-at="2019-01-16T16:20:57Z">
+      <class name="Sanity.FacebookAuthFromSignInBtnTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="setup" is-config="true" duration-ms="5262" started-at="2019-01-16T16:20:45Z" finished-at="2019-01-16T16:20:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="browser" is-config="true" duration-ms="1" started-at="2019-01-16T16:00:28Z" finished-at="2019-01-16T16:00:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browser -->
-        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="browserDimension" is-config="true" duration-ms="227" started-at="2019-01-16T16:00:28Z" finished-at="2019-01-16T16:00:28Z">
+        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="browserDimension" is-config="true" duration-ms="224" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserDimension -->
-        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-16T16:00:28Z" finished-at="2019-01-16T16:00:28Z">
+        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="browser" is-config="true" duration-ms="0" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- disableCookies -->
-        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-01-16T16:00:28Z" finished-at="2019-01-16T16:00:28Z">
+        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void Sanity.searchEndsUpOnArtlistPageTest.search() throws java.lang.InterruptedException]]>
+                <![CDATA[public void Sanity.FacebookAuthFromSignInBtnTest.FacebookLogin() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printTestInfo -->
-        <test-method status="PASS" signature="search()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="search" duration-ms="1529" started-at="2019-01-16T16:00:28Z" description="the script is searching for certain artist and then taks the user into the artists page" finished-at="2019-01-16T16:00:30Z">
+        <test-method status="PASS" signature="FacebookLogin()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="FacebookLogin" duration-ms="5732" started-at="2019-01-16T16:20:51Z" description="this test performs a login to artlist site through Facebook after clicking the sign in button" finished-at="2019-01-16T16:20:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-16T16:00:28Z" finished-at="2019-01-16T16:00:28Z">
+        </test-method> <!-- FacebookLogin -->
+        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-16T16:20:51Z" finished-at="2019-01-16T16:20:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUserAgent -->
-        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19]" name="closeBrowser" is-config="true" duration-ms="824" started-at="2019-01-16T16:00:30Z" finished-at="2019-01-16T16:00:31Z">
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b]" name="closeBrowser" is-config="true" duration-ms="814" started-at="2019-01-16T16:20:57Z" finished-at="2019-01-16T16:20:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=search status=SUCCESS method=searchEndsUpOnArtlistPageTest.search()[pri:0, instance:Sanity.searchEndsUpOnArtlistPageTest@658c5a19] output={null}]]]>
+                <![CDATA[[TestResult name=FacebookLogin status=SUCCESS method=FacebookAuthFromSignInBtnTest.FacebookLogin()[pri:0, instance:Sanity.FacebookAuthFromSignInBtnTest@34f6515b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- Sanity.searchEndsUpOnArtlistPageTest -->
+      </class> <!-- Sanity.FacebookAuthFromSignInBtnTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
