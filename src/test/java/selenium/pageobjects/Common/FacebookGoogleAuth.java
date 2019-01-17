@@ -1,5 +1,6 @@
 package selenium.pageobjects.Common;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -109,7 +110,8 @@ public class FacebookGoogleAuth extends Pages {
     }
     
     public WebElement setGoogleIncognitoPassword(String password) {
-        waitForElement(googlePasswordIncognitoInput, 30);
+    	waitForElementIsInvisible(By.cssSelector("#password > input"));
+        //waitForElement(googlePasswordIncognitoInput, 30);
         googlePasswordIncognitoInput.sendKeys(password);
         return googlePasswordIncognitoInput;
     }
