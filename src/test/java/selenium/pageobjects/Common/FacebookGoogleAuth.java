@@ -110,18 +110,13 @@ public class FacebookGoogleAuth extends Pages {
     }
     
     public WebElement setGoogleIncognitoPassword(String password) {
-    	waitForElementIsvisible(By.className("whsOnd zHQkBf"));
+    	waitForElement(By.xpath("//input[@name='password']"), 30);
         //waitForElement(googlePasswordIncognitoInput, 30);
         googlePasswordIncognitoInput.sendKeys(password);
         return googlePasswordIncognitoInput;
     }
     
-    private void waitForElementIsvisible(By cssSelector) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public WebElement clickOnGoogleLastNextIncognitoBtn() {
+    	public WebElement clickOnGoogleLastNextIncognitoBtn() {
         waitForElement(googleLastNextIncognitoBtnInput, 20);
         googleLastNextIncognitoBtnInput.click();
         return googleLastNextIncognitoBtnInput;
