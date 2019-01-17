@@ -2,61 +2,61 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11474" started-at="2019-01-17T07:55:38Z" finished-at="2019-01-17T07:55:49Z">
+  <suite name="Default suite" duration-ms="8514" started-at="2019-01-17T08:26:23Z" finished-at="2019-01-17T08:26:32Z">
     <groups>
-      <group name="Sanity">
-        <method signature="GoogleAuthFromSignInBtn.GoogleLogin()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="GoogleLogin" class="development.GoogleAuthFromSignInBtn"/>
-      </group> <!-- Sanity -->
+      <group name="Artlist">
+        <method signature="searchEndsUpOnArtlistPageTest.search()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="search" class="development.searchEndsUpOnArtlistPageTest"/>
+      </group> <!-- Artlist -->
     </groups>
-    <test name="Default test" duration-ms="11474" started-at="2019-01-17T07:55:38Z" finished-at="2019-01-17T07:55:49Z">
-      <class name="development.GoogleAuthFromSignInBtn">
-        <test-method status="PASS" signature="setup()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="setup" is-config="true" duration-ms="4055" started-at="2019-01-17T07:55:38Z" finished-at="2019-01-17T07:55:42Z">
+    <test name="Default test" duration-ms="8514" started-at="2019-01-17T08:26:23Z" finished-at="2019-01-17T08:26:32Z">
+      <class name="development.searchEndsUpOnArtlistPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="setup" is-config="true" duration-ms="4392" started-at="2019-01-17T08:26:23Z" finished-at="2019-01-17T08:26:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="browserDimension()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="browserDimension" is-config="true" duration-ms="224" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserDimension -->
-        <test-method status="PASS" signature="browser()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="browser" is-config="true" duration-ms="0" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
+        <test-method status="PASS" signature="browser()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="browser" is-config="true" duration-ms="1" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser -->
-        <test-method status="PASS" signature="disableCookies()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
+        <test-method status="PASS" signature="browserDimension()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="browserDimension" is-config="true" duration-ms="226" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserDimension -->
+        <test-method status="PASS" signature="disableCookies()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- disableCookies -->
-        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="setUserAgent" is-config="true" duration-ms="1" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUserAgent -->
-        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="printTestInfo" is-config="true" duration-ms="0" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
+        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void development.GoogleAuthFromSignInBtn.GoogleLogin() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void development.searchEndsUpOnArtlistPageTest.search() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printTestInfo -->
-        <test-method status="PASS" signature="GoogleLogin()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="GoogleLogin" duration-ms="6346" started-at="2019-01-17T07:55:42Z" description="this test performs a login to artlist site through Google after clicking the sign in button" finished-at="2019-01-17T07:55:49Z">
+        <test-method status="PASS" signature="search()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="search" duration-ms="3066" started-at="2019-01-17T08:26:28Z" description="the script is searching for certain artist and then taks the user into the artists page" finished-at="2019-01-17T08:26:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GoogleLogin -->
-        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="closeBrowser" is-config="true" duration-ms="835" started-at="2019-01-17T07:55:49Z" finished-at="2019-01-17T07:55:49Z">
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUserAgent -->
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="closeBrowser" is-config="true" duration-ms="811" started-at="2019-01-17T08:26:31Z" finished-at="2019-01-17T08:26:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=GoogleLogin status=SUCCESS method=GoogleAuthFromSignInBtn.GoogleLogin()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b] output={null}]]]>
+                <![CDATA[[TestResult name=search status=SUCCESS method=searchEndsUpOnArtlistPageTest.search()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- development.GoogleAuthFromSignInBtn -->
+      </class> <!-- development.searchEndsUpOnArtlistPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

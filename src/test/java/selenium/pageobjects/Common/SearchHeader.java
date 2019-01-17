@@ -39,7 +39,7 @@ public class SearchHeader extends Pages {
     @FindBy(css=".category-item-in-search-bar")
     private WebElement searchFirstResultInput;
     
-    @FindBy(css="#autoCompleteBox > ul > li > a")
+    @FindBy(css="#autoCompleteBox")
     private WebElement ResultToGetArtlistPageltInput;
     
     

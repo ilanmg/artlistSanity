@@ -3,18 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Sanity.GoogleAuthFromSignInBtn">
+      <class name="development.searchEndsUpOnArtlistPageTest">
         <methods>
           <include name="printTestInfo"/>
           <include name="setUserAgent"/>
-          <include name="GoogleLogin"/>
-          <include name="setup"/>
+          <include name="search"/>
           <include name="browser"/>
           <include name="disableCookies"/>
+          <include name="setup"/>
           <include name="browserDimension"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- Sanity.GoogleAuthFromSignInBtn -->
+      </class> <!-- development.searchEndsUpOnArtlistPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

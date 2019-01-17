@@ -108,9 +108,9 @@ public class FacebookGoogleAuth extends Pages {
         googleNextIncognitoBtn.click();
         return googleNextIncognitoBtn;
     }
-    
+     
     public WebElement setGoogleIncognitoPassword(String password) {
-    	waitForElement(By.xpath("//input[@name='password']"), 30);
+    	waitForElement(By.cssSelector("#password > input"), 30);
         //waitForElement(googlePasswordIncognitoInput, 30);
         googlePasswordIncognitoInput.sendKeys(password);
         return googlePasswordIncognitoInput;
