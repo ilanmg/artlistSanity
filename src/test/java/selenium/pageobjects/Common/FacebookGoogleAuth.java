@@ -110,7 +110,7 @@ public class FacebookGoogleAuth extends Pages {
     }
     
     public WebElement setGoogleIncognitoPassword(String password) {
-    	waitForElementIsvisible(By.cssSelector("#password > input"));
+    	waitForElementIsvisible(By.cssSelector("#password > div.aCsJod.oJeWuf > div > div.Xb9hP > input"));
         //waitForElement(googlePasswordIncognitoInput, 30);
         googlePasswordIncognitoInput.sendKeys(password);
         return googlePasswordIncognitoInput;
