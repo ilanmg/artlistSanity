@@ -2,61 +2,61 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11610" started-at="2019-01-17T07:33:51Z" finished-at="2019-01-17T07:34:03Z">
+  <suite name="Default suite" duration-ms="11474" started-at="2019-01-17T07:55:38Z" finished-at="2019-01-17T07:55:49Z">
     <groups>
       <group name="Sanity">
-        <method signature="GoogleAuthFromSignInBtn.GoogleLogin()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="GoogleLogin" class="Sanity.GoogleAuthFromSignInBtn"/>
+        <method signature="GoogleAuthFromSignInBtn.GoogleLogin()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="GoogleLogin" class="development.GoogleAuthFromSignInBtn"/>
       </group> <!-- Sanity -->
     </groups>
-    <test name="Default test" duration-ms="11610" started-at="2019-01-17T07:33:51Z" finished-at="2019-01-17T07:34:03Z">
-      <class name="Sanity.GoogleAuthFromSignInBtn">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="setup" is-config="true" duration-ms="4101" started-at="2019-01-17T07:33:51Z" finished-at="2019-01-17T07:33:55Z">
+    <test name="Default test" duration-ms="11474" started-at="2019-01-17T07:55:38Z" finished-at="2019-01-17T07:55:49Z">
+      <class name="development.GoogleAuthFromSignInBtn">
+        <test-method status="PASS" signature="setup()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="setup" is-config="true" duration-ms="4055" started-at="2019-01-17T07:55:38Z" finished-at="2019-01-17T07:55:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="browserDimension" is-config="true" duration-ms="227" started-at="2019-01-17T07:33:55Z" finished-at="2019-01-17T07:33:55Z">
+        <test-method status="PASS" signature="browserDimension()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="browserDimension" is-config="true" duration-ms="224" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserDimension -->
-        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="browser" is-config="true" duration-ms="0" started-at="2019-01-17T07:33:55Z" finished-at="2019-01-17T07:33:55Z">
+        <test-method status="PASS" signature="browser()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="browser" is-config="true" duration-ms="0" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser -->
-        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-17T07:33:55Z" finished-at="2019-01-17T07:33:55Z">
+        <test-method status="PASS" signature="disableCookies()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- disableCookies -->
-        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-01-17T07:33:55Z" finished-at="2019-01-17T07:33:55Z">
+        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="setUserAgent" is-config="true" duration-ms="1" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUserAgent -->
+        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="printTestInfo" is-config="true" duration-ms="0" started-at="2019-01-17T07:55:42Z" finished-at="2019-01-17T07:55:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void Sanity.GoogleAuthFromSignInBtn.GoogleLogin() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void development.GoogleAuthFromSignInBtn.GoogleLogin() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printTestInfo -->
-        <test-method status="PASS" signature="GoogleLogin()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="GoogleLogin" duration-ms="6450" started-at="2019-01-17T07:33:55Z" description="this test performs a login to artlist site through Google after clicking the sign in button" finished-at="2019-01-17T07:34:02Z">
+        <test-method status="PASS" signature="GoogleLogin()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="GoogleLogin" duration-ms="6346" started-at="2019-01-17T07:55:42Z" description="this test performs a login to artlist site through Google after clicking the sign in button" finished-at="2019-01-17T07:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GoogleLogin -->
-        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-17T07:33:55Z" finished-at="2019-01-17T07:33:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUserAgent -->
-        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b]" name="closeBrowser" is-config="true" duration-ms="817" started-at="2019-01-17T07:34:02Z" finished-at="2019-01-17T07:34:03Z">
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b]" name="closeBrowser" is-config="true" duration-ms="835" started-at="2019-01-17T07:55:49Z" finished-at="2019-01-17T07:55:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=GoogleLogin status=SUCCESS method=GoogleAuthFromSignInBtn.GoogleLogin()[pri:0, instance:Sanity.GoogleAuthFromSignInBtn@34f6515b] output={null}]]]>
+                <![CDATA[[TestResult name=GoogleLogin status=SUCCESS method=GoogleAuthFromSignInBtn.GoogleLogin()[pri:0, instance:development.GoogleAuthFromSignInBtn@34f6515b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- Sanity.GoogleAuthFromSignInBtn -->
+      </class> <!-- development.GoogleAuthFromSignInBtn -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

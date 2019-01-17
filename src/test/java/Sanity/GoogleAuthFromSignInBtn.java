@@ -57,7 +57,7 @@ public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
             facebookGoogleAuth.setGooglePassword("Tomido1212*");
             facebookGoogleAuth.clickOnGoogleLoginBtn();
             facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
-          // Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
+            //Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
         } else {
         	//checking google on remote 
         	

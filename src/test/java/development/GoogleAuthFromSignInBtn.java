@@ -48,7 +48,7 @@ public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
         
         loginPage.clickGoogleBtn();
 
-        Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
+       
         facebookGoogleAuth.switchToGoogleForm();
         if (facebookGoogleAuth.isGoogleAllreadyAssign()) {
         	//checking google on local 
@@ -57,7 +57,7 @@ public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
             facebookGoogleAuth.setGooglePassword("Tomido1212*");
             facebookGoogleAuth.clickOnGoogleLoginBtn();
             facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
-          // Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
+            Assert.assertEquals(false, siteHeader.startBtnIsDisplayed());
         } else {
         	//checking google on remote 
         	
