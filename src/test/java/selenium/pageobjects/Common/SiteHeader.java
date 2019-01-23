@@ -15,7 +15,7 @@ public class SiteHeader extends Pages {
     @FindBy(css = "#user-login-btn")
     private WebElement sginInbtn;
 
-    @FindBy(css = "div.login > a#user-login-btn")
+    @FindBy(css = "div.login > a#user-logined-btn")
     private WebElement accountBtn;
 
     @FindBy(css = ".start-btn.topsign")
@@ -59,6 +59,10 @@ public class SiteHeader extends Pages {
     }
 
     public boolean startBtnIsDisplayed() {
+        return isElementVisible(startNowBtn);
+    }
+    
+    public boolean songHasBeenPlayed() {
         return isElementVisible(startNowBtn);
     }
 

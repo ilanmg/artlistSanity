@@ -1,6 +1,5 @@
 package selenium.pageobjects.Common;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,10 +14,10 @@ public class SearchHeader extends Pages {
     @FindBy(css="#txtSearch")
     private WebElement searchInput;
 
-    @FindBy(css="a.category-item-in-search-bar")
+    @FindBy(className="category-item-in-search-bar")
     private WebElement resultInput;
 
-    @FindBy(css="a.artist-page-opener")
+    @FindBy(className="artist-page-opener")
     private WebElement resultLeadsToArtlistPage;
 
     @FindBy(className="tag-link")
@@ -36,13 +35,8 @@ public class SearchHeader extends Pages {
     @FindBy(css=".tob-bar-container i.search-icon")
     private WebElement searcByMagnifier;
 
-    @FindBy(css=".category-item-in-search-bar")
-    private WebElement searchFirstResultInput;
-    
-    @FindBy(css="#autoCompleteBox")
-    private WebElement ResultToGetArtlistPageltInput;
-    
-    
+    @FindBy(css = "#autoCompleteBox > ul > li > a")
+    private WebElement ResultToGetArtlistPage;
 
     public WebElement clickTriggerIcon() {
         waitForElement(triggerInput, 10);
@@ -51,19 +45,13 @@ public class SearchHeader extends Pages {
     }
 
     public WebElement clickSearchIcon() {
-    	waitForElement(searchInput, 10);
+        waitForElement(searchInput, 10);
         searchInput.click();
         return searchInput;
     }
-    /*
-   	public WebElement clickFirstResult() {
-   		waitForElementIsInvisible(By.cssSelector("a.category-item-in-search-bar"));
-   		resultInput.click();
-        return resultInput;
-    }
-   */	
-   	public WebElement clickFirstResult() {
-   		waitForElement(By.cssSelector("a.category-item-in-search-bar"), 40);
+
+        public WebElement clickFirstResult() {
+        waitForElement(resultInput, 10);
         resultInput.click();
         return resultInput;
     }
@@ -94,9 +82,6 @@ public class SearchHeader extends Pages {
         return removeResultInput;
     }
 
-
-   
-
     public WebElement closeTriggerIcon() {
         waitForElement(closingTriggerInput, 10);
         closingTriggerInput.click();
@@ -109,14 +94,8 @@ public class SearchHeader extends Pages {
         return searcByMagnifier;
     }
     
-    public boolean searchFirstResult() {
-        return isElementVisible(searchFirstResultInput);
+    public boolean ResultToGetArtlistPageIsDisplayed() {
+        return isElementVisible(ResultToGetArtlistPage);
     }
-    public boolean ResultToGetArtlistPage() {
-        return isElementVisible(ResultToGetArtlistPageltInput);
-    }
-    
     
 }
-
-

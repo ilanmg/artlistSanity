@@ -1,4 +1,4 @@
-package development;
+package wip;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -26,25 +26,21 @@ public class searchEndsUpOnArtlistPageTest extends SeleniumTestWrapper {
     LoginPage loginPage = PageFactory.initElements(getDriver(), LoginPage.class);
     WebDriver driver = startPage.getDriver();
     Modals modals = PageFactory.initElements(getDriver(), Modals.class);
+    SearchHeader SearchHeader = PageFactory.initElements(getDriver(), SearchHeader.class);
 
     @BeforeTest
     public void setup() {
-        startPage.open();
+        startPage.open(); 
     }
 
     @Test(groups ={"Artlist"},  description= "the script is searching for certain artist and then taks the user into the artists page")
     public void search() throws InterruptedException {
 
-        SearchHeader SearchHeader = PageFactory.initElements(getDriver(), SearchHeader.class);
-
         SearchHeader.clickTriggerIcon();
-        
         SearchHeader.clickSearchIcon().sendKeys("ian post");
-        
-        SearchHeader.clickResultToGetArtlistPage(); 
-        Assert.assertEquals(true, SearchHeader.ResultToGetArtlistPage());
-        
-
+        SearchHeader.clickResultToGetArtlistPage();
+        Assert.assertEquals(false, SearchHeader.ResultToGetArtlistPageIsDisplayed());
+       
+ 
     }
 }
-

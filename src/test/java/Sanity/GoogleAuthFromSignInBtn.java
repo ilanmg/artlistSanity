@@ -6,9 +6,14 @@ import static selenium.utils.annotations.browser.Browsers.PHANTOMJS;
 import static selenium.utils.browser.Screen.XLARGE;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -48,7 +53,7 @@ public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
         
         loginPage.clickGoogleBtn();
 
-        Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
+        //Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
         facebookGoogleAuth.switchToGoogleForm();
         if (facebookGoogleAuth.isGoogleAllreadyAssign()) {
         	//checking google on local 
@@ -57,18 +62,20 @@ public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
             facebookGoogleAuth.setGooglePassword("Tomido1212*");
             facebookGoogleAuth.clickOnGoogleLoginBtn();
             facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
-            //Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
+            Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
         } else {
         	//checking google on remote 
-        	
-            facebookGoogleAuth.setGoogleEmailOrPhoneIncognito("111ilanmg@artlist.io");
+        	facebookGoogleAuth.setGoogleEmailOrPhoneIncognito("ilanmg@artlist.io");
             facebookGoogleAuth.clickOnGoogleNextIncognitoBtn();
+            System.out.println("test1");
+            Thread.sleep(10000);
             facebookGoogleAuth.setGoogleIncognitoPassword("Tomido1212*");
+            Thread.sleep(10000);
             facebookGoogleAuth.clickOnGoogleLastNextIncognitoBtn();
             facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
-            Assert.assertEquals(false, siteHeader.startBtnIsDisplayed());
+            Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
         }
+
         
     }
 }
-

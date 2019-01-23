@@ -2,61 +2,58 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8514" started-at="2019-01-17T08:26:23Z" finished-at="2019-01-17T08:26:32Z">
+  <suite name="Default suite" duration-ms="42290" started-at="2019-01-23T08:50:35Z" finished-at="2019-01-23T08:51:17Z">
     <groups>
-      <group name="Artlist">
-        <method signature="searchEndsUpOnArtlistPageTest.search()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="search" class="development.searchEndsUpOnArtlistPageTest"/>
-      </group> <!-- Artlist -->
     </groups>
-    <test name="Default test" duration-ms="8514" started-at="2019-01-17T08:26:23Z" finished-at="2019-01-17T08:26:32Z">
-      <class name="development.searchEndsUpOnArtlistPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="setup" is-config="true" duration-ms="4392" started-at="2019-01-17T08:26:23Z" finished-at="2019-01-17T08:26:28Z">
+    <test name="Default test" duration-ms="42290" started-at="2019-01-23T08:50:35Z" finished-at="2019-01-23T08:51:17Z">
+      <class name="Sanity.playSong">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.playSong@658c5a19]" name="setup" is-config="true" duration-ms="5530" started-at="2019-01-23T08:50:35Z" finished-at="2019-01-23T08:50:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="browser()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="browser" is-config="true" duration-ms="1" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
+        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.playSong@658c5a19]" name="browser" is-config="true" duration-ms="1" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser -->
-        <test-method status="PASS" signature="browserDimension()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="browserDimension" is-config="true" duration-ms="226" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
+        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.playSong@658c5a19]" name="browserDimension" is-config="true" duration-ms="224" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserDimension -->
-        <test-method status="PASS" signature="disableCookies()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- disableCookies -->
-        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
+        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.playSong@658c5a19]" name="printTestInfo" is-config="true" duration-ms="2" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void development.searchEndsUpOnArtlistPageTest.search() throws java.lang.InterruptedException]]>
+                <![CDATA[public void Sanity.playSong.playPauseSong() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printTestInfo -->
-        <test-method status="PASS" signature="search()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="search" duration-ms="3066" started-at="2019-01-17T08:26:28Z" description="the script is searching for certain artist and then taks the user into the artists page" finished-at="2019-01-17T08:26:31Z">
+        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.playSong@658c5a19]" name="disableCookies" is-config="true" duration-ms="0" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-17T08:26:28Z" finished-at="2019-01-17T08:26:28Z">
+        </test-method> <!-- disableCookies -->
+        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.playSong@658c5a19]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUserAgent -->
-        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19]" name="closeBrowser" is-config="true" duration-ms="811" started-at="2019-01-17T08:26:31Z" finished-at="2019-01-17T08:26:32Z">
+        <test-method status="PASS" signature="playPauseSong()[pri:0, instance:Sanity.playSong@658c5a19]" name="playPauseSong" duration-ms="35691" started-at="2019-01-23T08:50:41Z" description="this test should play songs and pausing them" finished-at="2019-01-23T08:51:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- playPauseSong -->
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.playSong@658c5a19]" name="closeBrowser" is-config="true" duration-ms="832" started-at="2019-01-23T08:51:17Z" finished-at="2019-01-23T08:51:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=search status=SUCCESS method=searchEndsUpOnArtlistPageTest.search()[pri:0, instance:development.searchEndsUpOnArtlistPageTest@658c5a19] output={null}]]]>
+                <![CDATA[[TestResult name=playPauseSong status=SUCCESS method=playSong.playPauseSong()[pri:0, instance:Sanity.playSong@658c5a19] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- development.searchEndsUpOnArtlistPageTest -->
+      </class> <!-- Sanity.playSong -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

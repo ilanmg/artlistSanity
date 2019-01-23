@@ -1,14 +1,9 @@
-package wip;
+package development;
 
 import static selenium.utils.annotations.browser.Browsers.EDGE;
 import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
 import static selenium.utils.annotations.browser.Browsers.PHANTOMJS;
 import static selenium.utils.browser.Screen.XLARGE;
-
-import java.io.IOException;
-import java.util.Set;
-
-import javax.swing.text.html.HTMLDocument.Iterator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -21,9 +16,10 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import selenium.SeleniumTestWrapper;
-import selenium.pageobjects.Common.*;
+import selenium.pageobjects.Common.SiteHeader;
 import selenium.pageobjects.StartPage;
-import selenium.pageobjects.login.LoginPage;
+import selenium.pageobjects.Common.PlaySongsFromHomepage;
+import selenium.pageobjects.Common.PricingModal;
 import selenium.utils.annotations.browser.Browser;
 import selenium.utils.annotations.browser.BrowserDimension;
 import selenium.utils.annotations.browser.Browsers;
@@ -32,39 +28,46 @@ import selenium.utils.annotations.browser.Browsers;
 @Browser(skip = { INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX })
 
 
-public class GoogleAuthFromStartNowBtnTest extends SeleniumTestWrapper {
+public class playSong extends SeleniumTestWrapper {
 
     WebDriver driver = getDriver();
 
     StartPage startPage = PageFactory.initElements(driver, StartPage.class);
     SiteHeader siteHeader = PageFactory.initElements(driver, SiteHeader.class);
-    LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-    FacebookGoogleAuth facebookGoogleAuth = PageFactory.initElements(driver, FacebookGoogleAuth.class);
+    PlaySongsFromHomepage playSongs = PageFactory.initElements(driver, PlaySongsFromHomepage.class); 
     
+  
     @BeforeTest
     public void setup() throws InterruptedException {
         startPage.open();
      }
 
-   	
-	@Test(groups ={"Artlist"}, description = "this test performs a login to artlist site through Google after clicking the Start Now button")
-    public void GoogleLogin() throws InterruptedException, IOException {
-
-        String artlistWindowUrl = driver.getCurrentUrl();
-        siteHeader.clickOnSignIn();
-        maximize();
-
-        loginPage.clickGoogletnAfterClickingStartNowBtn();
-        
-        facebookGoogleAuth.switchToGoogleForm();
-        facebookGoogleAuth.setGoogleEmailOrPhone("ilanmg@artlist.io");
-        facebookGoogleAuth.clickOnGoogleNextBtn();
-        facebookGoogleAuth.setGooglePassword("Tomido1212*");
-        facebookGoogleAuth.clickOnGoogleLoginBtn();
-
-        facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
-        System.out.println(siteHeader.getAccountValue());
-        Assert.assertEquals("ilan's Music",siteHeader.getAccountValue());
+   
+	@Test(description = "this test should play songs and pausing them")
+    public void playPauseSong() throws InterruptedException {
+			
+		maximize();
+		
+		
+		playSongs.clickToPlayFirstSongOnList();
+		Thread.sleep(5000);
+		
+		playSongs.clickCanvasSongWave();
+		Thread.sleep(3000);
+		
+		playSongs.clickToPauseFirstSongOnList();
+		Thread.sleep(10000);
+		
+		playSongs.clickToPlayFirstSongOnList();
+		Thread.sleep(5000);
+		
+		playSongs.clickVolumeSpeaker();
+		Thread.sleep(5000);
+		
+		playSongs.clickTheVolumeSpeakerForTheSecondTime();
+		Thread.sleep(5000);
+		 Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
+		
     }
 }
 

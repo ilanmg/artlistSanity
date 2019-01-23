@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import selenium.SeleniumTestWrapper;
@@ -33,28 +34,40 @@ public class playSong extends SeleniumTestWrapper {
 
     StartPage startPage = PageFactory.initElements(driver, StartPage.class);
     SiteHeader siteHeader = PageFactory.initElements(driver, SiteHeader.class);
-    PlaySongsFromHomepage playSongs = PageFactory.initElements(driver, PlaySongsFromHomepage.class);
+    PlaySongsFromHomepage playSongs = PageFactory.initElements(driver, PlaySongsFromHomepage.class); 
     
   
-    
-    
     @BeforeTest
     public void setup() throws InterruptedException {
         startPage.open();
      }
 
    
-	@Test(description = "this test should play songs pausing them")
-    public void PaymentTestSuccess() throws InterruptedException {
-		
-		 
-		Thread.sleep(4000);
+	@Test(description = "this test should play songs and pausing them")
+    public void playPauseSong() throws InterruptedException {
+			
 		maximize();
-		playSongs.clickFirstSongOnListPauseBtn();
-        Thread.sleep(2000);
-       
-        
-       
+		
+		
+		playSongs.clickToPlayFirstSongOnList();
+		Thread.sleep(5000);
+		
+		playSongs.clickCanvasSongWave();
+		Thread.sleep(3000);
+		
+		playSongs.clickToPauseFirstSongOnList();
+		Thread.sleep(5000);
+		
+		playSongs.clickToPlayFirstSongOnList();
+		Thread.sleep(5000);
+		
+		playSongs.clickVolumeSpeaker();
+		Thread.sleep(5000);
+		
+		playSongs.clickTheVolumeSpeakerForTheSecondTime();
+		Thread.sleep(5000);
+		 Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
+		
     }
 }
 

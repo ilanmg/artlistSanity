@@ -3,18 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="development.searchEndsUpOnArtlistPageTest">
+      <class name="Sanity.playSong">
         <methods>
           <include name="printTestInfo"/>
-          <include name="setUserAgent"/>
-          <include name="search"/>
-          <include name="browser"/>
-          <include name="disableCookies"/>
           <include name="setup"/>
+          <include name="setUserAgent"/>
+          <include name="browser"/>
+          <include name="playPauseSong"/>
+          <include name="disableCookies"/>
           <include name="browserDimension"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- development.searchEndsUpOnArtlistPageTest -->
+      </class> <!-- Sanity.playSong -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,9 +1,5 @@
 package selenium;
 
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-
 import static org.junit.Assume.assumeFalse;
 import static org.junit.Assume.assumeTrue;
 
@@ -12,10 +8,13 @@ import java.lang.reflect.Method;
 import org.junit.AfterClass;
 import org.junit.Rule;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
 import selenium.configurations.TestConfig;
 import selenium.driver.WebDriverConfig;
 import selenium.utils.WebDriverProvider;
-import selenium.utils.annotations.DisableCookies;
 import selenium.utils.annotations.RepeatRule;
 import selenium.utils.annotations.UserAgent;
 import selenium.utils.annotations.browser.Browser;
@@ -59,10 +58,7 @@ public abstract class SeleniumTestWrapper<WinHandle> {
 
     @BeforeMethod
     public void disableCookies() {
-        DisableCookies cookies = this.getClass().getAnnotation(DisableCookies.class);
-        if (cookies != null) {
-            webDriverProvider.disableCookies(true);
-        }
+        webDriverProvider.disableCookies(true);
     }
 
     @BeforeMethod

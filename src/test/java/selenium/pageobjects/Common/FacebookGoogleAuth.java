@@ -1,6 +1,6 @@
+
 package selenium.pageobjects.Common;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,11 +16,10 @@ public class FacebookGoogleAuth extends Pages {
 
     @FindBy(css = ".card.signin-card")
     private WebElement googleAllreadyAssign;
-
-    @FindBy(css = "#u_0_0")
+    
+    @FindBy(css = "#header_block")
     private WebElement FaceBookAllreadyAssign;
-    
-    
+
     //Google incognito
     
     @FindBy(css = "#identifierId")
@@ -29,12 +28,15 @@ public class FacebookGoogleAuth extends Pages {
     @FindBy(css = "#identifierNext > content > span")
     private WebElement googleNextIncognitoBtn;
     
-    @FindBy(css = "#password > input")
+    @FindBy(xpath = "//*[@id=\"password\"]/div[1]/div/div[1]/input")
     private WebElement googlePasswordIncognitoInput;
     
-    @FindBy(id = "#passwordNext > content > span")
+    @FindBy(css = "#passwordNext > content > span")
     private WebElement googleLastNextIncognitoBtnInput;
 
+    @FindBy(css = "#passwordNext > content")
+    private WebElement clickGoogleOtherAccountIncognitoBtnInput;
+   
 
     //Google
     @FindBy(css = "input[type=\"Email\"]")
@@ -44,7 +46,7 @@ public class FacebookGoogleAuth extends Pages {
     private WebElement googleNextBtn;
    
     @FindBy(css = "#Passwd" )
-    private WebElement googlePasswordInput ;
+    private WebElement googlePasswordInput;
     
     @FindBy(css = "#signIn")
     private WebElement googleLoginBtn;
@@ -64,10 +66,10 @@ public class FacebookGoogleAuth extends Pages {
     @FindBy(css = "#email")
     private WebElement FacebookLoginEmailInput;
 
-    @FindBy(css = "#pass")
+    @FindBy(css ="#pass")
     private WebElement FacebookPasswordIncognitoInput;
 
-    @FindBy(xpath = "//*[@id=\"loginbutton\"]")
+    @FindBy(css = "#loginbutton")
     private WebElement FacebookIncognitoLoginBtnInput;
 
 
@@ -79,8 +81,7 @@ public class FacebookGoogleAuth extends Pages {
     public boolean isFaceBookAllreadyAssign(){
         return isElementPresent(FaceBookAllreadyAssign);
     }
-    
-    
+   
    
     public void switchToGoogleForm() {
 
@@ -96,6 +97,14 @@ public class FacebookGoogleAuth extends Pages {
      }
      
     //Google incognito
+    
+    
+    
+    public WebElement clickGoogleOtherAccountIncognitoBtn() {
+        waitForElement(clickGoogleOtherAccountIncognitoBtnInput, 30);
+        clickGoogleOtherAccountIncognitoBtnInput.click();
+        return clickGoogleOtherAccountIncognitoBtnInput;
+    }
     public WebElement setGoogleEmailOrPhoneIncognito(String email) {
         waitForElement(googleEmailOrPhoneInput, 30);
         googleEmailOrPhoneInput.sendKeys(email);
@@ -103,24 +112,23 @@ public class FacebookGoogleAuth extends Pages {
     }
     
     public WebElement clickOnGoogleNextIncognitoBtn() {
-
-        waitForElement(googleNextIncognitoBtn, 10);
+        waitForElement(googleNextIncognitoBtn, 30);
         googleNextIncognitoBtn.click();
         return googleNextIncognitoBtn;
     }
-     
+    
     public WebElement setGoogleIncognitoPassword(String password) {
-    	waitForElement(By.cssSelector("#password > input"), 30);
-        //waitForElement(googlePasswordIncognitoInput, 30);
+        waitForElement(googlePasswordIncognitoInput, 10);
         googlePasswordIncognitoInput.sendKeys(password);
-        return googlePasswordIncognitoInput;
+        return googlePasswordIncognitoInput; 
     }
     
-    	public WebElement clickOnGoogleLastNextIncognitoBtn() {
+    public WebElement clickOnGoogleLastNextIncognitoBtn() {
         waitForElement(googleLastNextIncognitoBtnInput, 20);
         googleLastNextIncognitoBtnInput.click();
         return googleLastNextIncognitoBtnInput;
     }
+ 
 
   //Facebook incognito
     public WebElement setFacebookIncognitoEmail(String email) {
@@ -150,7 +158,7 @@ public class FacebookGoogleAuth extends Pages {
         return googleEmailOrPhoneInput;
     }
 
-    public WebElement   clickOnGoogleNextBtn() {
+    public WebElement clickOnGoogleNextBtn() {
         if(this.isGoogleAllreadyAssign()){
             waitForElement(googleNextBtn, 10);
             googleNextBtn.click();
@@ -180,7 +188,7 @@ public class FacebookGoogleAuth extends Pages {
         googleLoginBtn.click();
         return googleLoginBtn;
     }
-    
+   
     public WebElement   clickOnFaceBookNextBtn() {
         if(this.isFaceBookAllreadyAssign()){
             waitForElement(clickFacebookLoginBtnInput, 10);
@@ -194,10 +202,10 @@ public class FacebookGoogleAuth extends Pages {
         }
 
     }
-    
+ 
     //Facebook
     public WebElement setFacebookmailOrPhone(String email) {
-        waitForElement(setFacebookLoginEmail, 30);
+        waitForElement(setFacebookLoginEmail, 10);
         setFacebookLoginEmail.sendKeys(email);
         return setFacebookLoginEmail;
     }
@@ -215,8 +223,4 @@ public class FacebookGoogleAuth extends Pages {
     }
   
 
-   
     }
-    
-
-

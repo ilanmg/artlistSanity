@@ -87,7 +87,7 @@ public abstract class SeleniumFunctions {
 	}
 
 	protected void waitForElement(final By by) {
-		waitForElement(by, ELEMENT_WAIT_TIMEOUT_IN_SECONDS);
+		waitForElement(by, ELEMENT_WAIT_TIMEOUT_IN_SECONDS); 
 	}
 
 	protected void waitForElement(final By by, final int timeoutInSeconds) {
@@ -97,9 +97,18 @@ public abstract class SeleniumFunctions {
 
 	protected void waitForElementIsInvisible(final By by) {
 		final WebDriverWait wait = new WebDriverWait(this.driver, ELEMENT_WAIT_TIMEOUT_IN_SECONDS);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(by)); 
 	}
-
+	
+	protected void setGoogleIncognitoPass(String password){
+	   WebDriverWait wait = new WebDriverWait(this.driver,30);
+	   wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#password > input")));
+	  this.driver.findElement(By.cssSelector("#password > input")).sendKeys(password);
+    }  
+	    
+	    
+	    
+	    
     protected void waitForTextToAppear(final String textToAppear, final WebElement element) {
         final WebDriverWait wait = new WebDriverWait(this.driver, ELEMENT_WAIT_TIMEOUT_IN_SECONDS);
         wait.until(ExpectedConditions.textToBePresentInElement(element, textToAppear));

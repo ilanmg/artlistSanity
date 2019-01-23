@@ -13,7 +13,6 @@ import selenium.pageobjects.login.LoginPage;
 import selenium.utils.annotations.browser.Browser;
 import selenium.utils.annotations.browser.BrowserDimension;
 import selenium.utils.annotations.browser.Browsers;
-
 import java.io.IOException;
 
 import static selenium.utils.annotations.browser.Browsers.*;
@@ -47,29 +46,26 @@ public class FacebookAuthFromSignInBtnTest extends SeleniumTestWrapper {
         
         loginPage.clickFacebookBtn();
         
-        Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
+      
         facebookGoogleAuth.switchToGoogleForm();
 
         if (facebookGoogleAuth.isFaceBookAllreadyAssign()) {
-        	  facebookGoogleAuth.setFacebookmailOrPhone("ilanmgr@gmail.com");
-              facebookGoogleAuth.setFacebookPassword("Tomido1212*");
-              facebookGoogleAuth.clickOnFacebookLoginBtn();
-              facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
-              
-              System.out.println(siteHeader.getAccountValue());
-              Assert.assertEquals(false, siteHeader.startBtnIsDisplayed());
-           
-        } else {
-            
-            facebookGoogleAuth.setFacebookIncognitoEmail("ilanmg@artlist.io");
+        	facebookGoogleAuth.setFacebookIncognitoEmail("ilanmg@artlist.io");
             facebookGoogleAuth.setFacebookIncognitoPassword("Tomido1212*");
             facebookGoogleAuth.clickFacebookIncognitoLoginBtn();
-            facebookGoogleAuth.switchToArtlist(artlistWindowUrl); 
-            Assert.assertEquals("ilan's Music", siteHeader.getAccountValue());
+            facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
+            Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
+               	
+        } else {
+        	
+            facebookGoogleAuth.setFacebookmailOrPhone("ilanmg@artlist.io");
+            facebookGoogleAuth.setFacebookPassword("Tomido1212*");
+            facebookGoogleAuth.clickOnFacebookLoginBtn();
+            facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
+            Assert.assertEquals(true, siteHeader.startBtnIsDisplayed()); 
         }
 
-        Assert.assertEquals(false, siteHeader.startBtnIsDisplayed());
+       
        
     }
 }
-
