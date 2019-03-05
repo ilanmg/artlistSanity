@@ -14,7 +14,7 @@ public class SearchHeader extends Pages {
     @FindBy(css="#txtSearch")
     private WebElement searchInput;
 
-    @FindBy(className="category-item-in-search-bar")
+    @FindBy(xpath="//a[contains(text(),'Business (Category)')]")
     private WebElement resultInput;
 
     @FindBy(className="artist-page-opener")
@@ -33,6 +33,7 @@ public class SearchHeader extends Pages {
     private WebElement closingTriggerInput;
 
     @FindBy(css=".tob-bar-container i.search-icon")
+    
     private WebElement searcByMagnifier;
 
     @FindBy(css = "#autoCompleteBox > ul > li > a")
@@ -63,7 +64,7 @@ public class SearchHeader extends Pages {
     }
 
     public WebElement clickResultToGetArtlistPage(){
-        waitForElement(resultLeadsToArtlistPage, 10);
+        waitForElement(resultLeadsToArtlistPage, 20);
         resultLeadsToArtlistPage.click();
         return resultLeadsToArtlistPage;
     }

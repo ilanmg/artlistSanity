@@ -2,58 +2,61 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="42290" started-at="2019-01-23T08:50:35Z" finished-at="2019-01-23T08:51:17Z">
+  <suite name="Default suite" duration-ms="12401" started-at="2019-03-04T14:32:14Z" finished-at="2019-03-04T14:32:27Z">
     <groups>
+      <group name="Artlist">
+        <method signature="JoinTest.joinUs()[pri:0, instance:Sanity.JoinTest@389c4eb1]" name="joinUs" class="Sanity.JoinTest"/>
+      </group> <!-- Artlist -->
     </groups>
-    <test name="Default test" duration-ms="42290" started-at="2019-01-23T08:50:35Z" finished-at="2019-01-23T08:51:17Z">
-      <class name="Sanity.playSong">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.playSong@658c5a19]" name="setup" is-config="true" duration-ms="5530" started-at="2019-01-23T08:50:35Z" finished-at="2019-01-23T08:50:41Z">
+    <test name="Default test" duration-ms="12401" started-at="2019-03-04T14:32:14Z" finished-at="2019-03-04T14:32:27Z">
+      <class name="Sanity.JoinTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.JoinTest@389c4eb1]" name="setup" is-config="true" duration-ms="5363" started-at="2019-03-04T14:32:14Z" finished-at="2019-03-04T14:32:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.playSong@658c5a19]" name="browser" is-config="true" duration-ms="1" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
+        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.JoinTest@389c4eb1]" name="browser" is-config="true" duration-ms="1" started-at="2019-03-04T14:32:20Z" finished-at="2019-03-04T14:32:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser -->
-        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.playSong@658c5a19]" name="browserDimension" is-config="true" duration-ms="224" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
+        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.JoinTest@389c4eb1]" name="browserDimension" is-config="true" duration-ms="246" started-at="2019-03-04T14:32:20Z" finished-at="2019-03-04T14:32:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserDimension -->
-        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.playSong@658c5a19]" name="printTestInfo" is-config="true" duration-ms="2" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
+        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.JoinTest@389c4eb1]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-03-04T14:32:20Z" finished-at="2019-03-04T14:32:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableCookies -->
+        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.JoinTest@389c4eb1]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-03-04T14:32:20Z" finished-at="2019-03-04T14:32:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void Sanity.playSong.playPauseSong() throws java.lang.InterruptedException]]>
+                <![CDATA[public void Sanity.JoinTest.joinUs() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printTestInfo -->
-        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.playSong@658c5a19]" name="disableCookies" is-config="true" duration-ms="0" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- disableCookies -->
-        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.playSong@658c5a19]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-01-23T08:50:41Z" finished-at="2019-01-23T08:50:41Z">
+        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.JoinTest@389c4eb1]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-03-04T14:32:20Z" finished-at="2019-03-04T14:32:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUserAgent -->
-        <test-method status="PASS" signature="playPauseSong()[pri:0, instance:Sanity.playSong@658c5a19]" name="playPauseSong" duration-ms="35691" started-at="2019-01-23T08:50:41Z" description="this test should play songs and pausing them" finished-at="2019-01-23T08:51:17Z">
+        <test-method status="PASS" signature="joinUs()[pri:0, instance:Sanity.JoinTest@389c4eb1]" name="joinUs" duration-ms="5996" started-at="2019-03-04T14:32:20Z" description="the script is clicking the join link just to make sure the user is led to the free-trial page" finished-at="2019-03-04T14:32:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- playPauseSong -->
-        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.playSong@658c5a19]" name="closeBrowser" is-config="true" duration-ms="832" started-at="2019-01-23T08:51:17Z" finished-at="2019-01-23T08:51:17Z">
+        </test-method> <!-- joinUs -->
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.JoinTest@389c4eb1]" name="closeBrowser" is-config="true" duration-ms="781" started-at="2019-03-04T14:32:26Z" finished-at="2019-03-04T14:32:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=playPauseSong status=SUCCESS method=playSong.playPauseSong()[pri:0, instance:Sanity.playSong@658c5a19] output={null}]]]>
+                <![CDATA[[TestResult name=joinUs status=SUCCESS method=JoinTest.joinUs()[pri:0, instance:Sanity.JoinTest@389c4eb1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- Sanity.playSong -->
+      </class> <!-- Sanity.JoinTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

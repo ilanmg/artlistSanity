@@ -33,44 +33,44 @@ import selenium.utils.annotations.browser.Browsers;
 public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
 
     WebDriver driver = getDriver();
-    
+  
     StartPage startPage = PageFactory.initElements(driver, StartPage.class);
     SiteHeader siteHeader = PageFactory.initElements(driver, SiteHeader.class);
     LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-    FacebookGoogleAuth facebookGoogleAuth = PageFactory.initElements(driver, FacebookGoogleAuth.class);
+    FacebookGoogleAuth facebookGoogleAuth = PageFactory.initElements(driver, FacebookGoogleAuth.class);  
 
+    
     @BeforeTest
     public void setup() throws InterruptedException {
         startPage.open();
+       
     }
 
     @Test(groups = {"Sanity"}, description = "this test performs a login to artlist site through Google after clicking the sign in button")
     public void GoogleLogin() throws InterruptedException, IOException {
-
-        String artlistWindowUrl = driver.getCurrentUrl();
+    	
+    	String artlistWindowUrl = driver.getCurrentUrl();
+        
         siteHeader.clickOnSignIn();
         maximize();
         
         loginPage.clickGoogleBtn();
-
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         //Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
         facebookGoogleAuth.switchToGoogleForm();
         if (facebookGoogleAuth.isGoogleAllreadyAssign()) {
         	//checking google on local 
-            facebookGoogleAuth.setGoogleEmailOrPhone("ilanmg@artlist.io");
+            facebookGoogleAuth.setGoogleEmailOrPhone("ilanmg@artlist.io"); 
             facebookGoogleAuth.clickOnGoogleNextBtn();
             facebookGoogleAuth.setGooglePassword("Tomido1212*");
             facebookGoogleAuth.clickOnGoogleLoginBtn();
             facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
-            Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());
+            Assert.assertEquals(false, siteHeader.startBtnIsDisplayed());
         } else {
         	//checking google on remote 
         	facebookGoogleAuth.setGoogleEmailOrPhoneIncognito("ilanmg@artlist.io");
             facebookGoogleAuth.clickOnGoogleNextIncognitoBtn();
-            System.out.println("test1");
-            Thread.sleep(10000);
             facebookGoogleAuth.setGoogleIncognitoPassword("Tomido1212*");
-            Thread.sleep(10000);
             facebookGoogleAuth.clickOnGoogleLastNextIncognitoBtn();
             facebookGoogleAuth.switchToArtlist(artlistWindowUrl);
             Assert.assertEquals(true, siteHeader.startBtnIsDisplayed());

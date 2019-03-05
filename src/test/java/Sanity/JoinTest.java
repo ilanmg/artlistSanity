@@ -28,7 +28,7 @@ public class JoinTest extends SeleniumTestWrapper {
     SiteHeader siteHeader = PageFactory.initElements(getDriver(), SiteHeader.class);
     JoinModal joinModal = PageFactory.initElements(getDriver(), JoinModal.class);
 
-    WebDriver driver = startPage.getDriver();
+    WebDriver driver = startPage.getDriver(); 
     //WebDriverWait wait = new WebDriverWait(driver, 5);
 
     @BeforeTest

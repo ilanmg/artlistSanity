@@ -1,4 +1,4 @@
-package Sanity;
+package old;
 
 
 import org.testng.Assert;
@@ -18,6 +18,8 @@ import selenium.utils.annotations.browser.Browsers;
 import static selenium.utils.annotations.browser.Browsers.*;
 import static selenium.utils.browser.Screen.XLARGE;
 
+import java.util.concurrent.TimeUnit;
+
 @BrowserDimension(XLARGE)
 @Browser(skip = { INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX })
 
@@ -29,23 +31,20 @@ public class searchTest extends SeleniumTestWrapper {
     WebDriver driver = startPage.getDriver();
     WebDriverWait wait = new WebDriverWait(driver, 1);
     Modals modals = PageFactory.initElements(getDriver(), Modals.class);
-    SearchHeader searchHeader = PageFactory.initElements(getDriver(), SearchHeader.class);
+    SearchHeader searchHeader = PageFactory.initElements(getDriver(), SearchHeader.class); 
 
     @BeforeTest
     public void setup() {
         startPage.open();
     }
 
-    @Test(groups ={"sanity"},  description= "the script is searching for a letter, then picks up the the first result")
+    @Test(groups ={"sanity"},  description= "the script is searching for a letter, then picks up the first result")
     public void search() throws InterruptedException {
-
-       
+    	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         searchHeader.clickTriggerIcon();
-       
         searchHeader.clickSearchIcon().sendKeys("b");
-        
         searchHeader.clickFirstResult();
-        //Assert.assertEquals(true, searchHeader.clickFirstResult()); 
+       Assert.assertEquals(true, searchHeader.ResultToGetArtlistPageIsDisplayed()); 
     }
 }
 

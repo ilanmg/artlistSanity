@@ -45,10 +45,10 @@ public class FacebookGoogleAuth extends Pages {
     @FindBy(css = "input#next")
     private WebElement googleNextBtn;
    
-    @FindBy(css = "#Passwd" )
+    @FindBy(xpath ="//*[@id=\"Passwd\"]" )
     private WebElement googlePasswordInput;
     
-    @FindBy(css = "#signIn")
+    @FindBy(css ="#signIn")
     private WebElement googleLoginBtn;
 
 
@@ -91,7 +91,7 @@ public class FacebookGoogleAuth extends Pages {
      }
     public void switchToFaceBookForm() {
 
-        String[] popUpWindows  = driver.getWindowHandles().toArray(new String[0]);
+        String[] popUpWindows  = driver.getWindowHandles().toArray(new String[0]); 
         this.driver.switchTo().window(popUpWindows[1]);
 
      }
@@ -177,7 +177,6 @@ public class FacebookGoogleAuth extends Pages {
     }
     
     public WebElement setGooglePassword(String password) {
-
         waitForElement(googlePasswordInput, 10);
         googlePasswordInput.sendKeys(password);
         return googlePasswordInput;
