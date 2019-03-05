@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Sanity" thread-count="1" parallel="tests">
-    <test name="Sanity">
-        <packages>
-            <package name="Sanity"/>
-        </packages>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sanity" parallel="tests">
+
+       <test name="Sanity10">
+        <classes>
+            <class name="Sanity.LoginTest10" />
+        </classes>
     </test>
+    <test name="Sanity14">
+        <classes>
+            <class name="Sanity.LoginTest14" />
+        </classes>
+    </test>
+
+ 
 </suite>
