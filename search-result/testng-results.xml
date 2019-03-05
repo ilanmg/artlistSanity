@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Sanity" duration-ms="9650" started-at="2019-03-05T09:08:40Z" finished-at="2019-03-05T09:08:50Z">
+  <suite name="Sanity" duration-ms="10003" started-at="2019-03-05T12:53:26Z" finished-at="2019-03-05T12:53:36Z">
     <groups>
       <group name="Sanity">
         <method signature="LoginTest10.log__in()[pri:0, instance:Sanity.LoginTest10@6adca536]" name="log__in" class="Sanity.LoginTest10"/>
       </group> <!-- Sanity -->
     </groups>
-    <test name="Sanity10" duration-ms="9650" started-at="2019-03-05T09:08:40Z" finished-at="2019-03-05T09:08:50Z">
+    <test name="Sanity10" duration-ms="10003" started-at="2019-03-05T12:53:26Z" finished-at="2019-03-05T12:53:36Z">
       <class name="Sanity.LoginTest10">
-        <test-method status="PASS" signature="setupDriver(org.testng.ITestContext)[pri:0, instance:Sanity.LoginTest10@6adca536]" name="setupDriver" is-config="true" duration-ms="1576" started-at="2019-03-05T09:08:40Z" finished-at="2019-03-05T09:08:42Z">
+        <test-method status="PASS" signature="setupDriver(org.testng.ITestContext)[pri:0, instance:Sanity.LoginTest10@6adca536]" name="setupDriver" is-config="true" duration-ms="1521" started-at="2019-03-05T12:53:26Z" finished-at="2019-03-05T12:53:28Z">
           <params>
             <param index="0">
               <value>
@@ -21,11 +21,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupDriver -->
-        <test-method status="PASS" signature="log__in()[pri:0, instance:Sanity.LoginTest10@6adca536]" name="log__in" duration-ms="8005" started-at="2019-03-05T09:08:42Z" description="the script should perform a login by giving the Email, Pass, and click the login button" finished-at="2019-03-05T09:08:50Z">
+        <test-method status="PASS" signature="log__in()[pri:0, instance:Sanity.LoginTest10@6adca536]" name="log__in" duration-ms="8411" started-at="2019-03-05T12:53:28Z" description="the script should perform a login by giving the Email, Pass, and click the login button" finished-at="2019-03-05T12:53:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- log__in -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:Sanity.LoginTest10@6adca536]" name="quitDriver" is-config="true" duration-ms="61" started-at="2019-03-05T09:08:50Z" finished-at="2019-03-05T09:08:50Z">
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:Sanity.LoginTest10@6adca536]" name="quitDriver" is-config="true" duration-ms="64" started-at="2019-03-05T12:53:36Z" finished-at="2019-03-05T12:53:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->

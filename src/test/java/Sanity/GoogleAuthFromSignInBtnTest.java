@@ -30,7 +30,7 @@ import selenium.utils.annotations.browser.Browsers;
 @Browser(skip = {INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX})
 
 
-public class GoogleAuthFromSignInBtn extends SeleniumTestWrapper {
+public class GoogleAuthFromSignInBtnTest extends SeleniumTestWrapper {
 
     WebDriver driver = getDriver();
   
